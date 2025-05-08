@@ -1,0 +1,9 @@
+streamlit
+setuptools
+seaborn==0.12.2
+pandas==1.5.3
+numpy==1.23.5
+scikit-learn==1.0.2
+scipy==1.7.3
+joblib==1.2.0
+pycaret[classification]==3.0.1
