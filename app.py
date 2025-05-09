@@ -21,81 +21,52 @@ st.sidebar.image('./images/logo_fiap.png', width=100)
 st.sidebar.subheader('Auto ML - Fiap [v2]')
 compatibility_mode = False
 
-# --- Bloco de Carregamento do Modelo com controle de mensagens via st.session_state ---
-mdl_rf = None  # Inicializa mdl_rf para garantir que está no escopo
+# --- Gerenciamento do Threshold com st.session_state ---
+if 'canonical_threshold' not in st.session_state:
+    st.session_state.canonical_threshold = 0.5 # Valor inicial padrão
 
-# Verificar se o modelo já foi carregado e está na session_state
-if 'mdl_rf_object' in st.session_state and st.session_state.mdl_rf_object is not None:
-    mdl_rf = st.session_state.mdl_rf_object
-    # Nenhuma mensagem é mostrada aqui, pois o modelo já foi carregado anteriormente.
-else:
-    # Modelo não está na sessão, então tentamos carregar.
-    # As mensagens só serão mostradas nesta primeira tentativa da sessão.
-    if not compatibility_mode: # Esta condição é True, pois compatibility_mode é False
+# Função de callback para sincronizar o canonical_threshold quando o slider muda
+def sync_threshold_from_slider():
+    st.session_state.canonical_threshold = st.session_state.threshold_slider_widget
+
+# --- Carregamento do Modelo com tratamento de erros ---
+if not compatibility_mode:
+    try:
         st.info("Tentando carregar o modelo...")
         
-        model_loaded_successfully_this_attempt = False
-        e1, e2, e3 = None, None, None # Para armazenar mensagens de erro específicas
-
+        # Tenta diferentes métodos de carregamento
         try:
-            # Tentativa 1: joblib
             mdl_rf = load('./pickle/pickle_rf_pycaret2.pkl')
             st.success("Modelo carregado com sucesso usando joblib.load!")
-            st.session_state.mdl_rf_object = mdl_rf # Armazena na sessão
-            model_loaded_successfully_this_attempt = True
-        except Exception as exc1:
-            e1 = exc1
+        except Exception as e1:
             st.warning(f"Erro ao carregar com joblib.load: {str(e1)}")
             
-            if not model_loaded_successfully_this_attempt:
+            try:
+                # Tenta carregamento alternativo com pickle
+                with open('./pickle/pickle_rf_pycaret2.pkl', 'rb') as f:
+                    mdl_rf = pickle.load(f)
+                st.success("Modelo carregado com sucesso usando pickle.load!")
+            except Exception as e2:
+                st.warning(f"Erro ao carregar com pickle.load: {str(e2)}")
+                
                 try:
-                    # Tentativa 2: pickle
-                    with open('./pickle/pickle_rf_pycaret2.pkl', 'rb') as f:
-                        mdl_rf = pickle.load(f)
-                    st.success("Modelo carregado com sucesso usando pickle.load!")
-                    st.session_state.mdl_rf_object = mdl_rf
-                    model_loaded_successfully_this_attempt = True
-                except Exception as exc2:
-                    e2 = exc2
-                    st.warning(f"Erro ao carregar com pickle.load: {str(e2)}")
-                    
-                    if not model_loaded_successfully_this_attempt:
-                        try:
-                            # Tentativa 3: pycaret
-                            mdl_rf = load_model('./pickle/pickle_rf_pycaret2')
-                            st.success("Modelo carregado com sucesso usando pycaret.load_model!")
-                            st.session_state.mdl_rf_object = mdl_rf
-                            model_loaded_successfully_this_attempt = True
-                        except Exception as exc3:
-                            e3 = exc3
-                            # Todas as tentativas falharam
-                            st.error(f"Todas as tentativas de carregamento falharam.")
-                            error_details = []
-                            if e1: error_details.append(f"1. Joblib: {str(e1)}")
-                            if e2: error_details.append(f"2. Pickle: {str(e2)}")
-                            if e3: error_details.append(f"3. PyCaret: {str(e3)}")
-                            st.error("Erros:\n" + "\n".join(error_details))
-                            st.error("O arquivo pickle pode ser incompatível devido a diferenças de versão do Python ou bibliotecas.")
-                            st.error("Possíveis soluções: Obtenha o código fonte usado para treinar o modelo ou solicite um modelo exportado com versões compatíveis.")
-                            st.session_state.mdl_rf_object = None # Garante que não há modelo na sessão
-                            st.stop()
-        
-        # Verificação final: se o modelo não foi carregado com sucesso nesta tentativa, e não parou antes.
-        if not model_loaded_successfully_this_attempt:
-            # Isso não deveria ser alcançado se st.stop() foi chamado, mas é uma salvaguarda.
-            st.error("ERRO INESPERADO: O modelo não foi carregado após todas as tentativas e o script não parou.")
-            st.session_state.mdl_rf_object = None
-            st.stop()
-    # Se compatibility_mode fosse True, não faria nada aqui, mdl_rf permaneceria None.
-
-# Após o bloco de carregamento, verificar se mdl_rf é None (o que indicaria falha no carregamento ou modo de compatibilidade)
-if not compatibility_mode and mdl_rf is None:
-    # Se mdl_rf ainda é None, significa que st.session_state.mdl_rf_object não foi definido ou foi definido como None.
-    # E st.stop() deveria ter sido chamado. Se chegamos aqui, é um estado inconsistente.
-    st.error("Falha crítica: O modelo não está disponível. A aplicação não pode continuar.")
-    st.info("Isso pode ocorrer se o carregamento inicial do modelo falhou e a aplicação foi de alguma forma continuada. Verifique os logs.")
-    st.stop()
-# --- Fim do Bloco de Carregamento do Modelo ---
+                    # Tenta carregamento com pycaret (que pode ter formato diferente)
+                    mdl_rf = load_model('./pickle/pickle_rf_pycaret2')
+                    st.success("Modelo carregado com sucesso usando pycaret load_model!")
+                except Exception as e3:
+                    st.error(f"Todas as tentativas de carregamento falharam.")
+                    st.error(f"Erros: \n1. {str(e1)}\n2. {str(e2)}\n3. {str(e3)}")
+                    st.error("O arquivo pickle pode ser incompatível devido a diferenças de versão do Python ou bibliotecas.")
+                    st.error("Possíveis soluções: Obtenha o código fonte usado para treinar o modelo ou solicite um modelo exportado com versões compatíveis.")
+                    st.stop()
+    except Exception as e:
+        st.error(f"Erro GERAL ao carregar modelo: {str(e)}")
+        st.error("Verifique se o arquivo pickle existe e está correto. O caminho esperado é './pickle/pickle_rf_pycaret2.pkl' (para joblib/pickle) ou './pickle/pickle_rf_pycaret2' (para pycaret load_model).")
+        st.stop()
+else:
+    # Este bloco não será mais executado com compatibility_mode = False
+    # st.warning("⚠️ Executando em modo de compatibilidade - O modelo não será carregado e as predições retornarão valores aleatórios apenas para teste da interface.") # Removido
+    pass
 
 st.title('Simulador - Conversão de Vendas')
 with st.expander('Descrição do App', expanded=False):
@@ -132,18 +103,49 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Define threshold padrão com slider estilizado
-threshold = st.sidebar.slider('Definir Threshold (slider)', 0.0, 1.0, 0.5, step=0.01)
+# Define threshold padrão com slider estilizado, conectado ao session_state via callback
+st.sidebar.slider(
+    'Definir Threshold (slider)', 
+    min_value=0.0, 
+    max_value=1.0, 
+    value=st.session_state.canonical_threshold, # Lê do valor canônico
+    step=0.01, 
+    key='threshold_slider_widget', # Chave própria para o widget do slider
+    on_change=sync_threshold_from_slider # Callback para atualizar o valor canônico
+)
  
-# Input via prompt de linguagem natural
-text_input = st.sidebar.text_input("Defina o threshold com linguagem natural (ex: 'usar 70%')")
-match = re.search(r'(\d+)', text_input)
-if match:
-    t_val = int(match.group(1)) / 100
-    if 0 <= t_val <= 1:
-        threshold = t_val
-        st.sidebar.success(f"Threshold ajustado via texto: {threshold}")
- 
+# Input via prompt de linguagem natural, conectado ao session_state
+text_input_val = st.sidebar.text_input(
+    "Defina o threshold com linguagem natural (ex: 'usar 70%' ou '0.6')", 
+    key='threshold_text_input' # Chave própria para o widget de input de texto
+)
+
+if text_input_val:
+    # Lógica para processar o input de texto (como antes)
+    match = re.search(r'(\d*\.?\d+)', text_input_val)
+    if match:
+        try:
+            num_str = match.group(1)
+            t_val = float(num_str)
+            
+            if t_val >= 1.0:
+                t_val = t_val / 100.0
+            
+            if 0.0 <= t_val <= 1.0:
+                # Atualiza o valor canônico, o slider refletirá isso na próxima renderização
+                if st.session_state.canonical_threshold != t_val: # Evita loop se o valor já for o mesmo
+                    st.session_state.canonical_threshold = t_val 
+                    st.sidebar.success(f"Threshold ajustado via texto para: {st.session_state.canonical_threshold:.2f}")
+                    # Considerar limpar o input de texto para evitar re-submissão ou loops
+                    # st.session_state.threshold_text_input = "" # Descomente se necessário, após testar
+            else:
+                st.sidebar.warning(f"Valor ({t_val:.2f}) fora do intervalo 0.0-1.0.")
+        except ValueError:
+            st.sidebar.error("Não foi possível converter o valor. Tente um número (ex: '65%' ou '0.65').")
+
+# A variável `threshold` usada no restante do app agora lê do valor canônico
+threshold = st.session_state.canonical_threshold
+
 # --- MODO CSV ---
 if database == 'CSV':
     file = st.sidebar.file_uploader('Upload do CSV', type='csv')
@@ -184,12 +186,6 @@ if database == 'CSV':
             
             # Seção para exibir estatísticas básicas do dataset
             st.markdown("##### Resumo do Dataset")
-            summary_cols = st.columns(4)
-            
-            with summary_cols[0]:
-                st.metric("Total de Linhas", f"{Xtest.shape[0]}")
-            with summary_cols[1]:
-                st.metric("Total de Colunas", f"{Xtest.shape[1]}")
             
             # Corrigido: Lógica para contagem mutuamente exclusiva de colunas numéricas e categóricas para o resumo
             numeric_col_names_for_summary = {col for col in Xtest.columns if Xtest[col].dtype in [np.float64, np.int64]}
@@ -200,6 +196,13 @@ if database == 'CSV':
                    (col not in numeric_col_names_for_summary and Xtest[col].nunique() <= 5)
             }
 
+            summary_cols = st.columns(4)
+
+            with summary_cols[0]:
+                st.metric("Total de Linhas", f"{Xtest.shape[0]}")
+            with summary_cols[1]:
+                st.metric("Total de Colunas", f"{Xtest.shape[1]}")
+            
             with summary_cols[2]:
                 st.metric("Colunas Numéricas", f"{len(numeric_col_names_for_summary)}")
             with summary_cols[3]:
@@ -249,13 +252,8 @@ if database == 'CSV':
             positive_rate = (ypred['final_pred'].sum() / len(ypred)) * 100
             metric_cols[2].metric("Taxa de conversão", f"{positive_rate:.1f}%")
             
-            # Score médio - CORRIGIDO para refletir o threshold
-            df_positivos_preditos = ypred[ypred['final_pred'] == 1]
-            if not df_positivos_preditos.empty:
-                avg_score = df_positivos_preditos['prediction_score_1'].mean() * 100
-            else:
-                avg_score = 0.0  # Se não houver positivos preditos, score médio é 0
-            
+            # Score médio
+            avg_score = ypred['prediction_score_1'].mean() * 100
             metric_cols[3].metric("Score médio", f"{avg_score:.1f}%")
             
             # Separador visual

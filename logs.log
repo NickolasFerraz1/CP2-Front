@@ -5901,3 +5901,211 @@ Please also refer to the documentation for alternative solver options:
 2025-05-09 18:57:28,308:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:600: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
   ax_kde.legend(fontsize=font_size-2)
 
+2025-05-09 19:24:56,534:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 19:24:56,534:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 19:24:56,534:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 19:24:56,534:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 19:24:56,927:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 19:25:03,985:INFO:Initializing predict_model()
+2025-05-09 19:25:03,985:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000027B0AEFE070>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000027B0AF89310>)
+2025-05-09 19:25:03,985:INFO:Checking exceptions
+2025-05-09 19:25:03,985:INFO:Preloading libraries
+2025-05-09 19:25:03,985:INFO:Set up data.
+2025-05-09 19:25:03,990:INFO:Set up index.
+2025-05-09 19:25:05,633:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:668: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig_hist, ax_hist = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 19:25:05,736:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:667: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 19:25:21,527:INFO:Initializing predict_model()
+2025-05-09 19:25:21,527:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000027B6C67B280>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000027B0D3E61F0>)
+2025-05-09 19:25:21,527:INFO:Checking exceptions
+2025-05-09 19:25:21,527:INFO:Preloading libraries
+2025-05-09 19:25:21,527:INFO:Set up data.
+2025-05-09 19:25:21,531:INFO:Set up index.
+2025-05-09 19:25:23,008:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:668: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig_hist, ax_hist = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 19:25:23,109:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:667: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 19:25:34,656:INFO:Initializing predict_model()
+2025-05-09 19:25:34,656:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000027B0AA09490>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000027B0E7638B0>)
+2025-05-09 19:25:34,656:INFO:Checking exceptions
+2025-05-09 19:25:34,657:INFO:Preloading libraries
+2025-05-09 19:25:34,657:INFO:Set up data.
+2025-05-09 19:25:34,660:INFO:Set up index.
+2025-05-09 19:25:36,122:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:668: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig_hist, ax_hist = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 19:25:36,223:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:667: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 19:29:48,475:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 19:29:48,476:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 19:29:48,476:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 19:29:48,476:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 19:29:48,840:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 19:33:33,078:INFO:Initializing predict_model()
+2025-05-09 19:33:33,078:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002BB10FC6100>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002BB10E56AF0>)
+2025-05-09 19:33:33,078:INFO:Checking exceptions
+2025-05-09 19:33:33,078:INFO:Preloading libraries
+2025-05-09 19:33:33,079:INFO:Set up data.
+2025-05-09 19:33:33,084:INFO:Set up index.
+2025-05-09 19:33:34,718:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:599: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  ax_hist.set_title(f'{col_hist_plot}', fontsize=font_size)
+
+2025-05-09 19:33:34,823:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:598: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  sns.histplot(y1[col_hist_plot], kde=False, color='green', label='1', stat='density', alpha=0.4, ax=ax_hist)
+
+2025-05-09 19:33:35,396:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:637: UserWarning: Dataset has 0 variance; skipping density estimate. Pass `warn_singular=False` to disable this warning.
+  ax_kde.set_xlabel(col_kde_plot, fontsize=font_size-1)
+
+2025-05-09 19:33:35,493:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:637: UserWarning: Dataset has 0 variance; skipping density estimate. Pass `warn_singular=False` to disable this warning.
+  ax_kde.set_xlabel(col_kde_plot, fontsize=font_size-1)
+
+2025-05-09 19:33:35,600:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:637: UserWarning: Dataset has 0 variance; skipping density estimate. Pass `warn_singular=False` to disable this warning.
+  ax_kde.set_xlabel(col_kde_plot, fontsize=font_size-1)
+
+2025-05-09 19:33:35,711:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:637: UserWarning: Dataset has 0 variance; skipping density estimate. Pass `warn_singular=False` to disable this warning.
+  ax_kde.set_xlabel(col_kde_plot, fontsize=font_size-1)
+
+2025-05-09 19:33:35,813:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:637: UserWarning: Dataset has 0 variance; skipping density estimate. Pass `warn_singular=False` to disable this warning.
+  ax_kde.set_xlabel(col_kde_plot, fontsize=font_size-1)
+
+2025-05-09 19:33:35,909:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:637: UserWarning: Dataset has 0 variance; skipping density estimate. Pass `warn_singular=False` to disable this warning.
+  ax_kde.set_xlabel(col_kde_plot, fontsize=font_size-1)
+
+2025-05-09 19:33:43,832:INFO:Initializing predict_model()
+2025-05-09 19:33:43,832:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002BB5A2F5730>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002BB141C4C10>)
+2025-05-09 19:33:43,832:INFO:Checking exceptions
+2025-05-09 19:33:43,833:INFO:Preloading libraries
+2025-05-09 19:33:43,833:INFO:Set up data.
+2025-05-09 19:33:43,836:INFO:Set up index.
+2025-05-09 19:33:45,425:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:599: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  ax_hist.set_title(f'{col_hist_plot}', fontsize=font_size)
+
+2025-05-09 19:33:45,536:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:598: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  sns.histplot(y1[col_hist_plot], kde=False, color='green', label='1', stat='density', alpha=0.4, ax=ax_hist)
+
