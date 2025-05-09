@@ -19,32 +19,32 @@ st.set_page_config(page_title='Simulador - Case Ifood',
 # Sidebar com configurações básicas
 st.sidebar.image('./images/logo_fiap.png', width=100)
 st.sidebar.subheader('Auto ML - Fiap [v2]')
-compatibility_mode = st.sidebar.checkbox('Modo de compatibilidade (ignorar carregamento do modelo)', value=False)
+compatibility_mode = True
 
 # --- Carregamento do Modelo com tratamento de erros ---
 if not compatibility_mode:
     try:
-        st.info("Tentando carregar o modelo...")
+        # st.info("Tentando carregar o modelo...") # Removed
         
         # Tenta diferentes métodos de carregamento
         try:
             mdl_rf = load('./pickle/pickle_rf_pycaret2.pkl')
-            st.success("Modelo carregado com sucesso usando joblib.load!")
+            # st.success("Modelo carregado com sucesso usando joblib.load!") # Removed
         except Exception as e1:
-            st.warning(f"Erro ao carregar com joblib.load: {str(e1)}")
+            # st.warning(f"Erro ao carregar com joblib.load: {str(e1)}") # Removed
             
             try:
                 # Tenta carregamento alternativo com pickle
                 with open('./pickle/pickle_rf_pycaret2.pkl', 'rb') as f:
                     mdl_rf = pickle.load(f)
-                st.success("Modelo carregado com sucesso usando pickle.load!")
+                # st.success("Modelo carregado com sucesso usando pickle.load!") # Removed
             except Exception as e2:
-                st.warning(f"Erro ao carregar com pickle.load: {str(e2)}")
+                # st.warning(f"Erro ao carregar com pickle.load: {str(e2)}") # Removed
                 
                 try:
                     # Tenta carregamento com pycaret (que pode ter formato diferente)
                     mdl_rf = load_model('./pickle/pickle_rf_pycaret2')
-                    st.success("Modelo carregado com sucesso usando pycaret load_model!")
+                    # st.success("Modelo carregado com sucesso usando pycaret load_model!") # Removed
                 except Exception as e3:
                     st.error(f"Todas as tentativas de carregamento falharam.")
                     st.error(f"Erros: \n1. {str(e1)}\n2. {str(e2)}\n3. {str(e3)}")
@@ -56,7 +56,8 @@ if not compatibility_mode:
         st.error("Verifique se o arquivo pickle existe e está correto")
         st.stop()
 else:
-    st.warning("⚠️ Executando em modo de compatibilidade - O modelo não será carregado e as predições retornarão valores aleatórios apenas para teste da interface.")
+    # st.warning("⚠️ Executando em modo de compatibilidade - O modelo não será carregado e as predições retornarão valores aleatórios apenas para teste da interface.") # Removed
+    pass # Mantém o bloco else para clareza, mas sem ação
 
 st.title('Simulador - Conversão de Vendas')
 with st.expander('Descrição do App', expanded=False):
@@ -245,149 +246,303 @@ if database == 'CSV':
             # Controles para ajustar a visualização
             cols_config = st.columns([2, 1, 1])
             with cols_config[0]:
-                max_vars = st.slider("Limitar número de variáveis", 1, len(feature_cols), 
-                                    min(6, len(feature_cols)), 
+                max_vars = st.slider("Limitar número de variáveis", 1, len(feature_cols) if feature_cols else 1, 
+                                    min(6, len(feature_cols) if feature_cols else 1), 
                                     help="Limite o número de variáveis para melhorar a performance")
             with cols_config[1]:
                 sort_by = st.selectbox("Ordenar por", ["Nome", "Importância"], index=0)
             with cols_config[2]:
                 show_controls = st.checkbox("Mostrar controles avançados", False)
             
-            if show_controls:
-                st.markdown("#### Configurações de visualização")
-                
-                sizing_cols = st.columns(4)
-                with sizing_cols[0]:
-                    fig_width = st.slider("Largura", 2.0, 10.0, 4.0, step=0.5)
-                with sizing_cols[1]:
-                    fig_height = st.slider("Altura", 1.0, 8.0, 2.5, step=0.5)
-                
-                layout_cols = st.columns(4)
-                with layout_cols[0]:
-                    num_columns = st.slider("Colunas no grid", 1, 6, 3)
-                with layout_cols[1]:
-                    dpi_val = st.slider("DPI", 70, 150, 90, step=10, 
-                                      help="Valores maiores = texto mais nítido, mas gráficos maiores")
-                with layout_cols[2]:
-                    font_size = st.slider("Tamanho da fonte", 8, 14, 10)
-                with layout_cols[3]:
-                    show_labels = st.checkbox("Mostrar rótulos", True)
+            # --- início da lógica de seleção de features revisada ---
+            # feature_cols_for_plotting será a lista final de colunas para as abas Boxplot, Histograma, Densidade.
+            # multiselect_options será a lista de opções para o widget multiselect.
+
+            all_available_numerical_features = [col for col in Xtest.columns if Xtest[col].dtype in [np.float64, np.int64]
+                                              and col not in ['ID', 'Z_CostContact', 'Z_Revenue', 'Response']]
+            
+            options_for_multiselect = []
+            current_features_for_plotting = []
+
+            if not all_available_numerical_features:
+                st.warning("Nenhuma variável numérica disponível para análise.")
+                # Define feature_cols_for_plotting como uma lista vazia para evitar erros nas abas
+                feature_cols_for_plotting = []
             else:
-                # Valores padrão otimizados para ultrawide
-                fig_width = 4
-                fig_height = 2.5
-                num_columns = 3
-                dpi_val = 90
-                font_size = 10
-                show_labels = True
-            
-            # Aplicar ordenação se necessário
-            if sort_by == "Importância":
-                # Cálculo simples de "importância" - diferença entre médias das classes
-                importance = {}
-                for col in feature_cols:
-                    if len(y0) > 0 and len(y1) > 0:  # Evitar divisão por zero
-                        importance[col] = abs(y1[col].mean() - y0[col].mean()) / (y0[col].std() + 1e-6)
-                    else:
-                        importance[col] = 0
-                # Ordenar colunas por importância
-                feature_cols = sorted(feature_cols, key=lambda x: importance.get(x, 0), reverse=True)
-            
-            # Opção para filtrar ou selecionar variáveis específicas
-            if show_controls:
-                selected_features = st.multiselect("Selecionar variáveis específicas", 
-                                                 options=feature_cols,
-                                                 default=[],
-                                                 help="Deixe vazio para usar as variáveis determinadas pelas configurações acima")
-                if selected_features:
-                    feature_cols = selected_features
-                else:
-                    # Limitar número de variáveis
-                    feature_cols = feature_cols[:max_vars]
-            else:
-                # Limitar número de variáveis
-                feature_cols = feature_cols[:max_vars]
-            
-            tabs = st.tabs(["Boxplot", "Histogramas", "Densidade"])
- 
-            with tabs[0]:
-                # Criando grid layout para os boxplots com mais colunas
-                cols = st.columns(num_columns)
-                col_idx = 0
-                
-                for col in feature_cols:
-                    with cols[col_idx % num_columns]:
-                        plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
-                        fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
-                        sns.boxplot(data=ypred, x='final_pred', y=col, ax=ax)
-                        ax.set_title(f'{col}', fontsize=font_size)
-                        ax.tick_params(labelsize=font_size-1)
-                        
-                        if show_labels:
-                            ax.set_xlabel('Previsão', fontsize=font_size-1)
-                            ax.set_ylabel(col, fontsize=font_size-1)
+                if sort_by == "Importância":
+                    importance = {}
+                    for col in all_available_numerical_features:
+                        if len(y0) > 0 and len(y1) > 0:
+                            mean_y1 = y1[col].mean() if not y1[col].empty else 0
+                            mean_y0 = y0[col].mean() if not y0[col].empty else 0
+                            std_y0 = y0[col].std() if not y0[col].empty else 1 # Evitar divisão por zero
+                            importance[col] = abs(mean_y1 - mean_y0) / (std_y0 + 1e-6) # Adicionado 1e-6 para evitar divisão por zero
                         else:
-                            ax.set_xlabel('')
-                            ax.set_ylabel('')
-                            
-                        plt.tight_layout(pad=1.2)
-                        st.pyplot(fig)
-                        plt.close(fig)  # Liberar memória
-                    col_idx += 1
- 
-            with tabs[1]:
-                # Criando grid layout para os histogramas com mais colunas
-                cols = st.columns(num_columns)
-                col_idx = 0
-                
-                for col in feature_cols:
-                    with cols[col_idx % num_columns]:
-                        plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
-                        fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
-                        sns.histplot(y0[col], kde=False, color='red', label='0', stat='density', alpha=0.4)
-                        sns.histplot(y1[col], kde=False, color='green', label='1', stat='density', alpha=0.4)
-                        ax.set_title(f'{col}', fontsize=font_size)
-                        ax.tick_params(labelsize=font_size-1)
-                        ax.legend(fontsize=font_size-2)
-                        
-                        if show_labels:
-                            ax.set_xlabel(col, fontsize=font_size-1)
-                            ax.set_ylabel('Densidade', fontsize=font_size-1)
-                        else:
-                            ax.set_xlabel('')
-                            ax.set_ylabel('')
-                            
-                        plt.tight_layout(pad=1.2)
-                        st.pyplot(fig)
-                        plt.close(fig)  # Liberar memória
-                    col_idx += 1
+                            importance[col] = 0
                     
-            with tabs[2]:
-                # Adicionando visualização apenas de densidades (mais compacta)
-                cols = st.columns(num_columns)
-                col_idx = 0
+                    sorted_features = sorted(all_available_numerical_features, key=lambda x: importance.get(x, 0), reverse=True)
+                    options_for_multiselect = sorted_features
+                    current_features_for_plotting = sorted_features
+                else: # Ordenar por Nome
+                    sorted_features = sorted(all_available_numerical_features)
+                    options_for_multiselect = sorted_features
+                    current_features_for_plotting = sorted_features
+
+                if show_controls:
+                    st.markdown("#### Configurações de visualização")
+                    
+                    sizing_cols = st.columns(4)
+                    with sizing_cols[0]:
+                        fig_width = st.slider("Largura Fig", 2.0, 10.0, 4.0, step=0.5, key="fig_w_adv")
+                    with sizing_cols[1]:
+                        fig_height = st.slider("Altura Fig", 1.0, 8.0, 2.5, step=0.5, key="fig_h_adv")
+                    
+                    layout_cols = st.columns(4)
+                    with layout_cols[0]:
+                        num_columns = st.slider("Colunas Grid", 1, 6, 3, key="num_cols_adv")
+                    with layout_cols[1]:
+                        dpi_val = st.slider("DPI Fig", 70, 150, 90, step=10, 
+                                          help="Valores maiores = texto mais nítido, mas gráficos maiores", key="dpi_adv")
+                    with layout_cols[2]:
+                        font_size = st.slider("Fonte Fig", 8, 14, 10, key="font_adv")
+                    with layout_cols[3]:
+                        show_labels = st.checkbox("Rótulos Fig", True, key="labels_adv")
+
+                    # Novo slider para o fator IQR (whis)
+                    whis_value = st.slider("Fator IQR p/ Outliers (Whis)", 0.5, 5.0, 1.5, step=0.1, 
+                                           key="whis_adv", 
+                                           help="Define o alcance das hastes do boxplot em múltiplos do IQR. Valores maiores incluem mais pontos nas hastes, mostrando menos outliers.")
+
+                    selected_features_multiselect = st.multiselect("Selecionar variáveis específicas", 
+                                                     options=options_for_multiselect,
+                                                     default=[],
+                                                     help="Deixe vazio para usar as variáveis determinadas pelas configurações acima (ordenadas e limitadas por 'Limitar número de variáveis').")
+                    if selected_features_multiselect:
+                        feature_cols_for_plotting = selected_features_multiselect
+                    else:
+                        # Se nada selecionado no multiselect, usa a lista (ordenada) e aplica max_vars
+                        feature_cols_for_plotting = current_features_for_plotting[:max_vars]
+                    whis_value = 1.5 # Valor padrão para whis se controles avançados estiverem desabilitados
+                else:
+                    # Valores padrão otimizados para ultrawide (sem controles avançados)
+                    fig_width = 4
+                    fig_height = 2.5
+                    num_columns = 3
+                    dpi_val = 90
+                    font_size = 10
+                    show_labels = True
+                    # Sem controles avançados, aplica max_vars à lista (ordenada)
+                    feature_cols_for_plotting = current_features_for_plotting[:max_vars]
+                    whis_value = 1.5 # Valor padrão para whis se controles avançados estiverem desabilitados
+
+            # --- fim da lógica de seleção de features revisada ---
+            
+            tabs = st.tabs(["Automático", "Boxplot", "Histogramas", "Densidade"])
+            
+            with tabs[0]: # Aba Automático
+                # Identificar colunas categóricas e numéricas no dataset
+                all_cols = [col for col in Xtest.columns if col not in ['ID', 'Z_CostContact', 'Z_Revenue', 'Response']]
                 
-                for col in feature_cols:
-                    with cols[col_idx % num_columns]:
-                        plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
-                        fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
-                        sns.kdeplot(y0[col], color='red', label='0')
-                        sns.kdeplot(y1[col], color='green', label='1')
-                        ax.set_title(f'{col}', fontsize=font_size)
-                        ax.tick_params(labelsize=font_size-1)
-                        ax.legend(fontsize=font_size-2)
-                        
-                        if show_labels:
-                            ax.set_xlabel(col, fontsize=font_size-1)
-                            ax.set_ylabel('Densidade', fontsize=font_size-1)
-                        else:
-                            ax.set_xlabel('')
-                            ax.set_ylabel('')
+                # Detecta tipos de colunas
+                categorical_cols = []
+                numerical_cols = []
+                
+                for col in all_cols:
+                    # Verifica se a coluna é categórica (objeto, string ou poucos valores únicos)
+                    if Xtest[col].dtype == 'object' or Xtest[col].nunique() <= 5:
+                        categorical_cols.append(col)
+                    # Se for numérica
+                    elif Xtest[col].dtype in [np.float64, np.int64]:
+                        numerical_cols.append(col)
+                
+                # Limitar o número de colunas para visualização
+                categorical_cols = categorical_cols[:max_vars]
+                numerical_cols = numerical_cols[:max_vars]
+                
+                # Informações sobre os tipos identificados
+                st.markdown(f"**Detecção automática:** {len(categorical_cols)} colunas categóricas, {len(numerical_cols)} colunas numéricas")
+                
+                # Gráficos para colunas categóricas (barras)
+                if categorical_cols:
+                    st.markdown("#### Colunas Categóricas (Gráficos de Barras)")
+                    
+                    cols = st.columns(num_columns)
+                    col_idx = 0
+                    
+                    for col in categorical_cols:
+                        with cols[col_idx % num_columns]:
+                            plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+                            fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
                             
-                        plt.tight_layout(pad=1.2)
-                        st.pyplot(fig)
-                        plt.close(fig)  # Liberar memória
-                    col_idx += 1
+                            # Contagem de valores para cada classe
+                            cat_counts_0 = y0[col].value_counts().sort_index()
+                            cat_counts_1 = y1[col].value_counts().sort_index()
+                            
+                            # Obter todas as categorias únicas
+                            all_categories = sorted(list(set(list(cat_counts_0.index) + list(cat_counts_1.index))))
+                            
+                            # Preparar dados para plot
+                            counts_0 = [cat_counts_0.get(cat, 0) for cat in all_categories]
+                            counts_1 = [cat_counts_1.get(cat, 0) for cat in all_categories]
+                            
+                            # Posições das barras
+                            x = np.arange(len(all_categories))
+                            width = 0.4
+                            
+                            # Plotar barras para cada classe
+                            ax.bar(x - width/2, counts_0, width, label='0', color='red', alpha=0.7)
+                            ax.bar(x + width/2, counts_1, width, label='1', color='green', alpha=0.7)
+                            
+                            # Configurar rótulos
+                            if len(all_categories) > 5:  # Rótulos na vertical se houver muitas categorias
+                                ax.set_xticks(x)
+                                ax.set_xticklabels(all_categories, rotation=90)
+                            else:
+                                ax.set_xticks(x)
+                                ax.set_xticklabels(all_categories)
+                                
+                            ax.set_title(f'{col}', fontsize=font_size)
+                            ax.tick_params(labelsize=font_size-1)
+                            ax.legend(fontsize=font_size-2)
+                            
+                            # Rótulos
+                            if show_labels:
+                                ax.set_xlabel(col, fontsize=font_size-1)
+                                ax.set_ylabel('Contagem', fontsize=font_size-1)
+                            else:
+                                ax.set_xlabel('')
+                                ax.set_ylabel('')
+                            
+                            plt.tight_layout(pad=1.2)
+                            st.pyplot(fig)
+                            plt.close(fig)  # Liberar memória
+                        col_idx += 1
+                
+                # Gráficos para colunas numéricas (boxplots)
+                if numerical_cols:
+                    st.markdown("#### Colunas Numéricas (Boxplots)")
+                    
+                    cols_auto = st.columns(num_columns) # Usar num_columns definido pela lógica acima
+                    col_idx_auto = 0
+                    
+                    for col_auto in numerical_cols: # numerical_cols é definido dentro desta aba
+                        with cols_auto[col_idx_auto % num_columns]:
+                            plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+                            fig_auto, ax_auto = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+                            
+                            # Criar boxplot com whis customizável
+                            sns.boxplot(data=ypred, x='final_pred', y=col_auto, ax=ax_auto, whis=whis_value)
+                            
+                            # Configurar gráfico
+                            ax_auto.set_title(f'{col_auto}', fontsize=font_size)
+                            ax_auto.tick_params(labelsize=font_size-1)
+                            
+                            if show_labels:
+                                ax_auto.set_xlabel('Previsão', fontsize=font_size-1)
+                                ax_auto.set_ylabel(col_auto, fontsize=font_size-1)
+                            else:
+                                ax_auto.set_xlabel('')
+                                ax_auto.set_ylabel('')
+                                
+                            plt.tight_layout(pad=1.2)
+                            st.pyplot(fig_auto)
+                            plt.close(fig_auto)
+                        col_idx_auto += 1
+            
+            with tabs[1]: # Aba Boxplot (usa feature_cols_for_plotting)
+                if not feature_cols_for_plotting:
+                    st.info("Nenhuma variável selecionada ou disponível para Boxplots.")
+                else:
+                    st.markdown("#### Boxplots das Variáveis Selecionadas")
+                    cols_boxplot = st.columns(num_columns)
+                    col_idx_boxplot = 0
+                    
+                    for col_bp in feature_cols_for_plotting:
+                        with cols_boxplot[col_idx_boxplot % num_columns]:
+                            plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+                            fig_bp, ax_bp = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+                            # Usar whis_value para controlar outliers
+                            sns.boxplot(data=ypred, x='final_pred', y=col_bp, ax=ax_bp, whis=whis_value)
+                            ax_bp.set_title(f'{col_bp}', fontsize=font_size)
+                            ax_bp.tick_params(labelsize=font_size-1)
+                            
+                            if show_labels:
+                                ax_bp.set_xlabel('Previsão', fontsize=font_size-1)
+                                ax_bp.set_ylabel(col_bp, fontsize=font_size-1)
+                            else:
+                                ax_bp.set_xlabel('')
+                                ax_bp.set_ylabel('')
+                                
+                            plt.tight_layout(pad=1.2)
+                            st.pyplot(fig_bp)
+                            plt.close(fig_bp)
+                        col_idx_boxplot += 1
+ 
+            with tabs[2]: # Aba Histogramas (usa feature_cols_for_plotting)
+                if not feature_cols_for_plotting:
+                    st.info("Nenhuma variável selecionada ou disponível para Histogramas.")
+                else:
+                    st.markdown("#### Histogramas das Variáveis Selecionadas")
+                    cols_hist = st.columns(num_columns)
+                    col_idx_hist = 0
+                    
+                    for col_hist_plot in feature_cols_for_plotting: # Renomeada variável de loop para evitar conflito
+                        with cols_hist[col_idx_hist % num_columns]:
+                            plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+                            fig_hist, ax_hist = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+                            # Evitar erro se y0 ou y1 estiverem vazios para a coluna específica
+                            if not y0[col_hist_plot].empty:
+                                sns.histplot(y0[col_hist_plot], kde=False, color='red', label='0', stat='density', alpha=0.4, ax=ax_hist)
+                            if not y1[col_hist_plot].empty:
+                                sns.histplot(y1[col_hist_plot], kde=False, color='green', label='1', stat='density', alpha=0.4, ax=ax_hist)
+                            ax_hist.set_title(f'{col_hist_plot}', fontsize=font_size)
+                            ax_hist.tick_params(labelsize=font_size-1)
+                            ax_hist.legend(fontsize=font_size-2)
+                            
+                            if show_labels:
+                                ax_hist.set_xlabel(col_hist_plot, fontsize=font_size-1)
+                                ax_hist.set_ylabel('Densidade', fontsize=font_size-1)
+                            else:
+                                ax_hist.set_xlabel('')
+                                ax_hist.set_ylabel('')
+                                
+                            plt.tight_layout(pad=1.2)
+                            st.pyplot(fig_hist)
+                            plt.close(fig_hist)
+                        col_idx_hist += 1
+                    
+            with tabs[3]: # Aba Densidade (usa feature_cols_for_plotting)
+                if not feature_cols_for_plotting:
+                    st.info("Nenhuma variável selecionada ou disponível para Gráficos de Densidade.")
+                else:
+                    st.markdown("#### Gráficos de Densidade das Variáveis Selecionadas")
+                    cols_kde = st.columns(num_columns)
+                    col_idx_kde = 0
+                    
+                    for col_kde_plot in feature_cols_for_plotting: # Renomeada variável de loop
+                        with cols_kde[col_idx_kde % num_columns]:
+                            plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+                            fig_kde, ax_kde = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+                            # Evitar erro se y0 ou y1 estiverem vazios
+                            if not y0[col_kde_plot].empty:
+                                sns.kdeplot(y0[col_kde_plot], color='red', label='0', ax=ax_kde)
+                            if not y1[col_kde_plot].empty:
+                                sns.kdeplot(y1[col_kde_plot], color='green', label='1', ax=ax_kde)
+                            ax_kde.set_title(f'{col_kde_plot}', fontsize=font_size)
+                            ax_kde.tick_params(labelsize=font_size-1)
+                            ax_kde.legend(fontsize=font_size-2)
+                            
+                            if show_labels:
+                                ax_kde.set_xlabel(col_kde_plot, fontsize=font_size-1)
+                                ax_kde.set_ylabel('Densidade', fontsize=font_size-1)
+                            else:
+                                ax_kde.set_xlabel('')
+                                ax_kde.set_ylabel('')
+                                
+                            plt.tight_layout(pad=1.2)
+                            st.pyplot(fig_kde)
+                            plt.close(fig_kde)
+                        col_idx_kde += 1
  
 # --- MODO ONLINE ---
 else:
@@ -494,12 +649,6 @@ else:
     btn_cols = st.columns([3, 1])
     with btn_cols[0]:
         predict_btn = st.button("🔍 Realizar Predição", use_container_width=True)
-    with btn_cols[1]:
-        view_full = st.checkbox("Ver tabela completa")
-        
-    # Exibir dados completos se solicitado
-    if view_full:
-        st.dataframe(df_input, height=150)
         
     if predict_btn:
         try:

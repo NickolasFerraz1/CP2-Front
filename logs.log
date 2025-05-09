@@ -3163,3 +3163,186 @@ Please also refer to the documentation for alternative solver options:
 2025-05-09 15:55:58,430:INFO:Preloading libraries
 2025-05-09 15:55:58,430:INFO:Set up data.
 2025-05-09 15:55:58,434:INFO:Set up index.
+2025-05-09 16:44:09,604:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 16:44:09,604:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 16:44:09,604:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 16:44:09,604:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 16:44:10,582:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 16:50:38,706:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 16:50:38,706:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 16:50:38,706:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 16:50:38,706:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 16:50:39,039:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 17:29:48,397:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:322: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  sns.boxplot(data=ypred, x='final_pred', y=col, ax=ax)
+
+2025-05-09 17:29:48,469:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:321: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:29:58,711:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:374: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  sns.kdeplot(y0[col], color='red', label='0')
+
+2025-05-09 17:29:58,842:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:373: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:31:12,437:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:31:12,437:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:31:12,437:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:31:12,437:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:31:12,959:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 17:33:04,067:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:414: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  ax.legend(title='Previsão', fontsize=font_size-2, labels=['Previsto: 0', 'Previsto: 1'])
+
+2025-05-09 17:33:04,133:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:413: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  (not y1.empty and col_name in y1 and not y1[col_name].empty):
+
+2025-05-09 17:33:08,624:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:326: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  cols_tab1 = st.columns(num_columns)
+
+2025-05-09 17:33:08,700:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:325: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  
+
+2025-05-09 17:36:23,306:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:36:23,306:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:36:23,306:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:36:23,306:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:36:23,653:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 17:36:34,917:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:419: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:36:34,986:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:418: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:36:42,979:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:331: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:36:43,049:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:355: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:38:54,302:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:38:54,302:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:38:54,302:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:38:54,302:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:38:54,889:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 17:39:10,565:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:457: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:39:10,798:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:456: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:40:15,061:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:403: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:40:15,136:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:402: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:41:41,934:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:403: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:41:47,076:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:403: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:41:47,166:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:402: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:42:52,922:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:403: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:42:53,006:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:402: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:43:13,589:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:403: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:43:13,680:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:402: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:43:42,509:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:403: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:43:42,602:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:402: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:43:54,319:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:403: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:43:54,406:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:402: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:44:08,628:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:403: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:44:08,726:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:431: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:47:37,345:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:47:37,345:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:47:37,345:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:47:37,345:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 17:47:37,731:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 17:47:49,047:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:484: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig_hist, ax_hist = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:47:49,162:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:483: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:48:22,252:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:424: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig_auto, ax_auto = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:48:22,322:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:423: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:48:40,454:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:424: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig_auto, ax_auto = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:48:40,525:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:423: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:49:02,507:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:424: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig_auto, ax_auto = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:49:02,575:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:423: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 17:51:48,806:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:489: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  sns.histplot(y1[col_hist_plot], kde=False, color='green', label='1', stat='density', alpha=0.4, ax=ax_hist)
+
+2025-05-09 17:51:48,910:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:488: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  if not y1[col_hist_plot].empty:
+
+2025-05-09 17:53:20,966:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:492: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  ax_hist.legend(fontsize=font_size-2)
+
+2025-05-09 17:53:21,077:WARNING:C:\Users\prude\OneDrive\Área de Trabalho\CP\CP2-Front\app.py:491: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  ax_hist.tick_params(labelsize=font_size-1)
+
