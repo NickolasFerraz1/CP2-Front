@@ -14,6 +14,11 @@ st.set_page_config(page_title='Simulador - Case Ifood',
                    layout='wide')
  
 st.title('Simulador - Conversão de Vendas')
+with st.expander('Descrição do App', expanded=False):
+    st.markdown("""
+        Este simulador utiliza um modelo de machine learning para prever a conversão de vendas com base em dados demográficos, comportamentais e históricos de campanhas.<br>
+        Você pode inserir os dados manualmente ou carregar um arquivo CSV para gerar predições e visualizar insights analíticos.
+    """, unsafe_allow_html=True)
  
 # Load modelo treinado
 import os
@@ -36,7 +41,32 @@ st.sidebar.image('./images/logo_fiap.png', width=100)
 st.sidebar.subheader('Auto ML - Fiap [v2]')
 database = st.sidebar.radio('Fonte dos dados de entrada (X):', ('CSV', 'Online'), horizontal=True)
  
-# Define threshold padrão
+# Estilo CSS customizado para o slider
+st.markdown(
+    """
+    <style>
+    /* Altera a cor do track do slider */
+    [data-testid="stSidebar"] [data-testid="stSlider"] > div > div > div > div {
+        background: linear-gradient(to right, #FF4B4B 0%, #FF4B4B 50%, #3F3F3F 50%, #3F3F3F 100%);
+    }
+
+    /* Altera a cor da bolinha (thumb) do slider */
+    [data-testid="stSidebar"] [data-testid="stSlider"] span[role="slider"] {
+        background-color: #FF4B4B;
+        border: 2px solid white;
+    }
+
+    /* Altera a cor do texto acima do slider */
+    [data-testid="stSidebar"] [data-testid="stSlider"] .css-1y4p8pa {
+        color: #FF4B4B;
+        font-weight: bold;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Define threshold padrão com slider estilizado
 threshold = st.sidebar.slider('Definir Threshold (slider)', 0.0, 1.0, 0.5, step=0.01)
  
 # Input via prompt de linguagem natural
