@@ -1,0 +1,1191 @@
+2025-05-09 14:27:18,668:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:27:18,668:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:27:18,668:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:27:18,668:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:27:19,121:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 14:27:19,685:INFO:PyCaret ClassificationExperiment
+2025-05-09 14:27:19,686:INFO:Logging name: clf-default-name
+2025-05-09 14:27:19,686:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-05-09 14:27:19,686:INFO:version 3.0.1
+2025-05-09 14:27:19,686:INFO:Initializing setup()
+2025-05-09 14:27:19,686:INFO:self.USI: 2d1f
+2025-05-09 14:27:19,686:INFO:self._variable_keys: {'_available_plots', 'exp_name_log', 'log_plots_param', 'exp_id', 'X_test', 'fold_shuffle_param', 'y_train', 'idx', 'target_param', 'y', 'n_jobs_param', 'pipeline', 'y_test', 'USI', 'X', 'fold_groups_param', 'seed', 'html_param', 'gpu_param', 'X_train', 'gpu_n_jobs_param', 'logging_param', 'fold_generator', 'memory', '_ml_usecase', 'is_multiclass', 'data', 'fix_imbalance'}
+2025-05-09 14:27:19,686:INFO:Checking environment
+2025-05-09 14:27:19,686:INFO:python_version: 3.10.11
+2025-05-09 14:27:19,686:INFO:python_build: ('tags/v3.10.11:7d4cc5a', 'Apr  5 2023 00:38:17')
+2025-05-09 14:27:19,686:INFO:machine: AMD64
+2025-05-09 14:27:19,687:INFO:platform: Windows-10-10.0.26100-SP0
+2025-05-09 14:27:19,687:INFO:Memory: svmem(total=34240745472, available=22476812288, percent=34.4, used=11763933184, free=22476812288)
+2025-05-09 14:27:19,687:INFO:Physical Core: 8
+2025-05-09 14:27:19,687:INFO:Logical Core: 16
+2025-05-09 14:27:19,687:INFO:Checking libraries
+2025-05-09 14:27:19,687:INFO:System:
+2025-05-09 14:27:19,687:INFO:    python: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+2025-05-09 14:27:19,687:INFO:executable: C:\Users\marco\AppData\Local\Programs\Python\Python310\python.exe
+2025-05-09 14:27:19,687:INFO:   machine: Windows-10-10.0.26100-SP0
+2025-05-09 14:27:19,687:INFO:PyCaret required dependencies:
+2025-05-09 14:27:19,704:INFO:                 pip: 23.0.1
+2025-05-09 14:27:19,704:INFO:          setuptools: 65.5.0
+2025-05-09 14:27:19,704:INFO:             pycaret: 3.0.1
+2025-05-09 14:27:19,704:INFO:             IPython: 8.36.0
+2025-05-09 14:27:19,704:INFO:          ipywidgets: 8.1.7
+2025-05-09 14:27:19,704:INFO:                tqdm: 4.67.1
+2025-05-09 14:27:19,704:INFO:               numpy: 1.23.5
+2025-05-09 14:27:19,704:INFO:              pandas: 1.5.3
+2025-05-09 14:27:19,704:INFO:              jinja2: 3.1.6
+2025-05-09 14:27:19,704:INFO:               scipy: 1.11.4
+2025-05-09 14:27:19,704:INFO:              joblib: 1.3.2
+2025-05-09 14:27:19,704:INFO:             sklearn: 1.2.2
+2025-05-09 14:27:19,704:INFO:                pyod: 2.0.5
+2025-05-09 14:27:19,704:INFO:            imblearn: 0.12.4
+2025-05-09 14:27:19,704:INFO:   category_encoders: 2.7.0
+2025-05-09 14:27:19,704:INFO:            lightgbm: 4.6.0
+2025-05-09 14:27:19,704:INFO:               numba: 0.60.0
+2025-05-09 14:27:19,704:INFO:            requests: 2.32.3
+2025-05-09 14:27:19,704:INFO:          matplotlib: 3.10.1
+2025-05-09 14:27:19,704:INFO:          scikitplot: 0.3.7
+2025-05-09 14:27:19,704:INFO:         yellowbrick: 1.5
+2025-05-09 14:27:19,704:INFO:              plotly: 5.24.1
+2025-05-09 14:27:19,704:INFO:             kaleido: 0.2.1
+2025-05-09 14:27:19,704:INFO:         statsmodels: 0.14.4
+2025-05-09 14:27:19,704:INFO:              sktime: 0.17.0
+2025-05-09 14:27:19,704:INFO:               tbats: 1.1.3
+2025-05-09 14:27:19,704:INFO:            pmdarima: 2.0.4
+2025-05-09 14:27:19,704:INFO:              psutil: 7.0.0
+2025-05-09 14:27:19,704:INFO:PyCaret optional dependencies:
+2025-05-09 14:27:19,721:INFO:                shap: Not installed
+2025-05-09 14:27:19,721:INFO:           interpret: Not installed
+2025-05-09 14:27:19,721:INFO:                umap: Not installed
+2025-05-09 14:27:19,721:INFO:    pandas_profiling: Not installed
+2025-05-09 14:27:19,721:INFO:  explainerdashboard: Not installed
+2025-05-09 14:27:19,721:INFO:             autoviz: Not installed
+2025-05-09 14:27:19,721:INFO:           fairlearn: Not installed
+2025-05-09 14:27:19,721:INFO:             xgboost: Not installed
+2025-05-09 14:27:19,721:INFO:            catboost: Not installed
+2025-05-09 14:27:19,721:INFO:              kmodes: Not installed
+2025-05-09 14:27:19,721:INFO:             mlxtend: Not installed
+2025-05-09 14:27:19,721:INFO:       statsforecast: Not installed
+2025-05-09 14:27:19,721:INFO:        tune_sklearn: Not installed
+2025-05-09 14:27:19,721:INFO:                 ray: Not installed
+2025-05-09 14:27:19,721:INFO:            hyperopt: Not installed
+2025-05-09 14:27:19,721:INFO:              optuna: Not installed
+2025-05-09 14:27:19,721:INFO:               skopt: Not installed
+2025-05-09 14:27:19,721:INFO:              mlflow: Not installed
+2025-05-09 14:27:19,721:INFO:              gradio: Not installed
+2025-05-09 14:27:19,721:INFO:             fastapi: Not installed
+2025-05-09 14:27:19,721:INFO:             uvicorn: Not installed
+2025-05-09 14:27:19,721:INFO:              m2cgen: Not installed
+2025-05-09 14:27:19,721:INFO:           evidently: Not installed
+2025-05-09 14:27:19,721:INFO:               fugue: Not installed
+2025-05-09 14:27:19,721:INFO:           streamlit: 1.45.0
+2025-05-09 14:27:19,721:INFO:             prophet: Not installed
+2025-05-09 14:27:19,721:INFO:None
+2025-05-09 14:27:19,721:INFO:Set up data.
+2025-05-09 14:27:19,721:INFO:Set up train/test split.
+2025-05-09 14:27:19,736:INFO:Set up index.
+2025-05-09 14:27:19,737:INFO:Set up folding strategy.
+2025-05-09 14:27:19,737:INFO:Assigning column types.
+2025-05-09 14:27:19,739:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-05-09 14:27:19,769:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-05-09 14:27:19,771:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-09 14:27:19,794:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:19,794:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:19,824:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-05-09 14:27:19,824:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-09 14:27:19,843:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:19,843:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:19,843:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-05-09 14:27:19,874:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-09 14:27:19,886:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:19,886:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:19,923:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-09 14:27:19,942:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:19,942:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:19,942:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-05-09 14:27:19,991:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:19,991:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:20,040:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:20,041:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:20,042:INFO:Preparing preprocessing pipeline...
+2025-05-09 14:27:20,043:INFO:Set up simple imputation.
+2025-05-09 14:27:20,046:INFO:Set up encoding of categorical features.
+2025-05-09 14:27:20,046:INFO:Set up removing outliers.
+2025-05-09 14:27:20,046:INFO:Set up imbalanced handling.
+2025-05-09 14:27:20,107:INFO:Finished creating preprocessing pipeline.
+2025-05-09 14:27:20,112:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\marco\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStoreP...
+                                                              verbose=0))),
+                ('remove_outliers',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RemoveOutliers(method='iforest',
+                                                               n_jobs=1,
+                                                               random_state=123,
+                                                               threshold=0.05))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              n_jobs=None,
+                                                                              random_state=None,
+                                                                              sampling_strategy='auto'))))],
+         verbose=False)
+2025-05-09 14:27:20,113:INFO:Creating final display dataframe.
+2025-05-09 14:27:20,270:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target          Response
+2                   Target type            Binary
+3           Original data shape        (1988, 26)
+4        Transformed data shape        (2907, 34)
+5   Transformed train set shape        (2310, 34)
+6    Transformed test set shape         (597, 34)
+7              Numeric features                23
+8          Categorical features                 2
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation              mean
+12       Categorical imputation              mode
+13     Maximum one-hot encoding                25
+14              Encoding method              None
+15              Remove outliers              True
+16           Outliers threshold              0.05
+17                Fix imbalance              True
+18         Fix imbalance method             SMOTE
+19               Fold Generator   StratifiedKFold
+20                  Fold Number                10
+21                     CPU Jobs                -1
+22                      Use GPU             False
+23               Log Experiment             False
+24              Experiment Name  clf-default-name
+25                          USI              2d1f
+2025-05-09 14:27:20,337:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:20,354:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:20,403:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:20,403:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:27:20,404:INFO:setup() successfully completed in 0.79s...............
+2025-05-09 14:27:20,404:INFO:Initializing compare_models()
+2025-05-09 14:27:20,404:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028DA0B4BC40>, include=['lr', 'rf', 'lightgbm', 'gbc'], fold=None, round=4, cross_validation=True, sort=AUC, n_select=5, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x0000028DA0B4BC40>, 'include': ['lr', 'rf', 'lightgbm', 'gbc'], 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'AUC', 'n_select': 5, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>}, exclude=None)
+2025-05-09 14:27:20,404:INFO:Checking exceptions
+2025-05-09 14:27:20,407:INFO:Preparing display monitor
+2025-05-09 14:27:20,410:INFO:Initializing Logistic Regression
+2025-05-09 14:27:20,410:INFO:Total runtime is 0.0 minutes
+2025-05-09 14:27:20,410:INFO:SubProcess create_model() called ==================================
+2025-05-09 14:27:20,410:INFO:Initializing create_model()
+2025-05-09 14:27:20,410:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028DA0B4BC40>, estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000028DEAC0DC30>, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:27:20,410:INFO:Checking exceptions
+2025-05-09 14:27:20,410:INFO:Importing libraries
+2025-05-09 14:27:20,410:INFO:Copying training dataset
+2025-05-09 14:27:20,414:INFO:Defining folds
+2025-05-09 14:27:20,415:INFO:Declaring metric variables
+2025-05-09 14:27:20,415:INFO:Importing untrained model
+2025-05-09 14:27:20,415:INFO:Logistic Regression Imported successfully
+2025-05-09 14:27:20,415:INFO:Starting cross validation
+2025-05-09 14:27:20,416:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-09 14:27:23,586:WARNING:C:\Users\marco\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\linear_model\_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-05-09 14:27:23,686:WARNING:C:\Users\marco\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\linear_model\_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-05-09 14:27:23,756:WARNING:C:\Users\marco\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\linear_model\_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-05-09 14:27:24,268:INFO:Calculating mean and std
+2025-05-09 14:27:24,268:INFO:Creating metrics dataframe
+2025-05-09 14:27:24,353:INFO:Uploading results into container
+2025-05-09 14:27:24,353:INFO:Uploading model into container now
+2025-05-09 14:27:24,353:INFO:_master_model_container: 1
+2025-05-09 14:27:24,353:INFO:_display_container: 2
+2025-05-09 14:27:24,353:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2025-05-09 14:27:24,353:INFO:create_model() successfully completed......................................
+2025-05-09 14:27:24,427:INFO:SubProcess create_model() end ==================================
+2025-05-09 14:27:24,427:INFO:Creating metrics dataframe
+2025-05-09 14:27:24,430:INFO:Initializing Random Forest Classifier
+2025-05-09 14:27:24,430:INFO:Total runtime is 0.06701426108678182 minutes
+2025-05-09 14:27:24,430:INFO:SubProcess create_model() called ==================================
+2025-05-09 14:27:24,430:INFO:Initializing create_model()
+2025-05-09 14:27:24,430:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028DA0B4BC40>, estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000028DEAC0DC30>, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:27:24,430:INFO:Checking exceptions
+2025-05-09 14:27:24,430:INFO:Importing libraries
+2025-05-09 14:27:24,430:INFO:Copying training dataset
+2025-05-09 14:27:24,436:INFO:Defining folds
+2025-05-09 14:27:24,436:INFO:Declaring metric variables
+2025-05-09 14:27:24,436:INFO:Importing untrained model
+2025-05-09 14:27:24,436:INFO:Random Forest Classifier Imported successfully
+2025-05-09 14:27:24,436:INFO:Starting cross validation
+2025-05-09 14:27:24,437:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-09 14:27:27,302:INFO:Calculating mean and std
+2025-05-09 14:27:27,302:INFO:Creating metrics dataframe
+2025-05-09 14:27:27,414:INFO:Uploading results into container
+2025-05-09 14:27:27,415:INFO:Uploading model into container now
+2025-05-09 14:27:27,415:INFO:_master_model_container: 2
+2025-05-09 14:27:27,415:INFO:_display_container: 2
+2025-05-09 14:27:27,415:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False)
+2025-05-09 14:27:27,415:INFO:create_model() successfully completed......................................
+2025-05-09 14:27:27,490:INFO:SubProcess create_model() end ==================================
+2025-05-09 14:27:27,490:INFO:Creating metrics dataframe
+2025-05-09 14:27:27,494:INFO:Initializing Light Gradient Boosting Machine
+2025-05-09 14:27:27,494:INFO:Total runtime is 0.11806465387344361 minutes
+2025-05-09 14:27:27,495:INFO:SubProcess create_model() called ==================================
+2025-05-09 14:27:27,495:INFO:Initializing create_model()
+2025-05-09 14:27:27,495:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028DA0B4BC40>, estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000028DEAC0DC30>, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:27:27,495:INFO:Checking exceptions
+2025-05-09 14:27:27,495:INFO:Importing libraries
+2025-05-09 14:27:27,495:INFO:Copying training dataset
+2025-05-09 14:27:27,500:INFO:Defining folds
+2025-05-09 14:27:27,500:INFO:Declaring metric variables
+2025-05-09 14:27:27,500:INFO:Importing untrained model
+2025-05-09 14:27:27,500:INFO:Light Gradient Boosting Machine Imported successfully
+2025-05-09 14:27:27,500:INFO:Starting cross validation
+2025-05-09 14:27:27,501:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-09 14:27:29,001:INFO:Calculating mean and std
+2025-05-09 14:27:29,001:INFO:Creating metrics dataframe
+2025-05-09 14:27:29,119:INFO:Uploading results into container
+2025-05-09 14:27:29,121:INFO:Uploading model into container now
+2025-05-09 14:27:29,121:INFO:_master_model_container: 3
+2025-05-09 14:27:29,121:INFO:_display_container: 2
+2025-05-09 14:27:29,121:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2025-05-09 14:27:29,121:INFO:create_model() successfully completed......................................
+2025-05-09 14:27:29,198:INFO:SubProcess create_model() end ==================================
+2025-05-09 14:27:29,198:INFO:Creating metrics dataframe
+2025-05-09 14:27:29,202:INFO:Initializing Gradient Boosting Classifier
+2025-05-09 14:27:29,202:INFO:Total runtime is 0.1465474565823873 minutes
+2025-05-09 14:27:29,202:INFO:SubProcess create_model() called ==================================
+2025-05-09 14:27:29,203:INFO:Initializing create_model()
+2025-05-09 14:27:29,203:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028DA0B4BC40>, estimator=gbc, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000028DEAC0DC30>, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:27:29,203:INFO:Checking exceptions
+2025-05-09 14:27:29,203:INFO:Importing libraries
+2025-05-09 14:27:29,203:INFO:Copying training dataset
+2025-05-09 14:27:29,207:INFO:Defining folds
+2025-05-09 14:27:29,207:INFO:Declaring metric variables
+2025-05-09 14:27:29,208:INFO:Importing untrained model
+2025-05-09 14:27:29,208:INFO:Gradient Boosting Classifier Imported successfully
+2025-05-09 14:27:29,208:INFO:Starting cross validation
+2025-05-09 14:27:29,209:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-09 14:27:30,721:INFO:Calculating mean and std
+2025-05-09 14:27:30,721:INFO:Creating metrics dataframe
+2025-05-09 14:27:30,832:INFO:Uploading results into container
+2025-05-09 14:27:30,832:INFO:Uploading model into container now
+2025-05-09 14:27:30,832:INFO:_master_model_container: 4
+2025-05-09 14:27:30,832:INFO:_display_container: 2
+2025-05-09 14:27:30,832:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2025-05-09 14:27:30,832:INFO:create_model() successfully completed......................................
+2025-05-09 14:27:30,895:INFO:SubProcess create_model() end ==================================
+2025-05-09 14:27:30,895:INFO:Creating metrics dataframe
+2025-05-09 14:27:30,911:INFO:Initializing create_model()
+2025-05-09 14:27:30,911:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028DA0B4BC40>, estimator=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:27:30,911:INFO:Checking exceptions
+2025-05-09 14:27:30,911:INFO:Importing libraries
+2025-05-09 14:27:30,911:INFO:Copying training dataset
+2025-05-09 14:27:30,911:INFO:Defining folds
+2025-05-09 14:27:30,911:INFO:Declaring metric variables
+2025-05-09 14:27:30,911:INFO:Importing untrained model
+2025-05-09 14:27:30,911:INFO:Declaring custom model
+2025-05-09 14:27:30,911:INFO:Light Gradient Boosting Machine Imported successfully
+2025-05-09 14:27:30,911:INFO:Cross validation set to False
+2025-05-09 14:27:30,911:INFO:Fitting Model
+2025-05-09 14:27:30,983:INFO:[LightGBM] [Warning] Found whitespace in feature_names, replace with underlines
+2025-05-09 14:27:30,983:INFO:[LightGBM] [Info] Number of positive: 1155, number of negative: 1155
+2025-05-09 14:27:30,983:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000803 seconds.
+2025-05-09 14:27:30,985:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-05-09 14:27:30,985:INFO:[LightGBM] [Info] Total Bins 6044
+2025-05-09 14:27:30,985:INFO:[LightGBM] [Info] Number of data points in the train set: 2310, number of used features: 32
+2025-05-09 14:27:30,985:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-05-09 14:27:31,147:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2025-05-09 14:27:31,147:INFO:create_model() successfully completed......................................
+2025-05-09 14:27:31,211:INFO:Initializing create_model()
+2025-05-09 14:27:31,258:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028DA0B4BC40>, estimator=GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:27:31,258:INFO:Checking exceptions
+2025-05-09 14:27:31,258:INFO:Importing libraries
+2025-05-09 14:27:31,258:INFO:Copying training dataset
+2025-05-09 14:27:31,258:INFO:Defining folds
+2025-05-09 14:27:31,258:INFO:Declaring metric variables
+2025-05-09 14:27:31,258:INFO:Importing untrained model
+2025-05-09 14:27:31,258:INFO:Declaring custom model
+2025-05-09 14:27:31,258:INFO:Gradient Boosting Classifier Imported successfully
+2025-05-09 14:27:31,258:INFO:Cross validation set to False
+2025-05-09 14:27:31,258:INFO:Fitting Model
+2025-05-09 14:27:31,417:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2025-05-09 14:27:31,417:INFO:create_model() successfully completed......................................
+2025-05-09 14:27:31,465:INFO:Initializing create_model()
+2025-05-09 14:27:31,481:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028DA0B4BC40>, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:27:31,481:INFO:Checking exceptions
+2025-05-09 14:27:31,481:INFO:Importing libraries
+2025-05-09 14:27:31,481:INFO:Copying training dataset
+2025-05-09 14:27:31,481:INFO:Defining folds
+2025-05-09 14:27:31,481:INFO:Declaring metric variables
+2025-05-09 14:27:31,481:INFO:Importing untrained model
+2025-05-09 14:27:31,481:INFO:Declaring custom model
+2025-05-09 14:27:31,481:INFO:Random Forest Classifier Imported successfully
+2025-05-09 14:27:31,481:INFO:Cross validation set to False
+2025-05-09 14:27:31,481:INFO:Fitting Model
+2025-05-09 14:27:31,647:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False)
+2025-05-09 14:27:31,647:INFO:create_model() successfully completed......................................
+2025-05-09 14:27:31,711:INFO:Initializing create_model()
+2025-05-09 14:27:31,711:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028DA0B4BC40>, estimator=LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:27:31,711:INFO:Checking exceptions
+2025-05-09 14:27:31,711:INFO:Importing libraries
+2025-05-09 14:27:31,711:INFO:Copying training dataset
+2025-05-09 14:27:31,711:INFO:Defining folds
+2025-05-09 14:27:31,711:INFO:Declaring metric variables
+2025-05-09 14:27:31,711:INFO:Importing untrained model
+2025-05-09 14:27:31,711:INFO:Declaring custom model
+2025-05-09 14:27:31,711:INFO:Logistic Regression Imported successfully
+2025-05-09 14:27:31,711:INFO:Cross validation set to False
+2025-05-09 14:27:31,711:INFO:Fitting Model
+2025-05-09 14:27:31,869:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2025-05-09 14:27:31,869:INFO:create_model() successfully completed......................................
+2025-05-09 14:27:31,932:INFO:_master_model_container: 4
+2025-05-09 14:27:31,932:INFO:_display_container: 2
+2025-05-09 14:27:31,932:INFO:[LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0), GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False), RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)]
+2025-05-09 14:27:31,932:INFO:compare_models() successfully completed......................................
+2025-05-09 14:27:31,932:INFO:Initializing predict_model()
+2025-05-09 14:27:31,932:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000028DA0B4BC40>, estimator=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000028DEA9ABF40>)
+2025-05-09 14:27:31,932:INFO:Checking exceptions
+2025-05-09 14:27:31,932:INFO:Preloading libraries
+2025-05-09 14:27:31,932:INFO:Set up data.
+2025-05-09 14:27:31,932:INFO:Set up index.
+2025-05-09 14:27:32,082:INFO:Initializing save_model()
+2025-05-09 14:27:32,082:INFO:save_model(model=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0), model_name=pickle_rf_pycaret2, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\marco\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStoreP...
+                                                              verbose=0))),
+                ('remove_outliers',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RemoveOutliers(method='iforest',
+                                                               n_jobs=1,
+                                                               random_state=123,
+                                                               threshold=0.05))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              n_jobs=None,
+                                                                              random_state=None,
+                                                                              sampling_strategy='auto'))))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2025-05-09 14:27:32,082:INFO:Adding model into prep_pipe
+2025-05-09 14:27:32,091:INFO:pickle_rf_pycaret2.pkl saved in current working directory
+2025-05-09 14:27:32,101:INFO:Pipeline(memory=FastMemory(location=C:\Users\marco\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStoreP...
+                 LGBMClassifier(boosting_type='gbdt', class_weight=None,
+                                colsample_bytree=1.0, importance_type='split',
+                                learning_rate=0.1, max_depth=-1,
+                                min_child_samples=20, min_child_weight=0.001,
+                                min_split_gain=0.0, n_estimators=100, n_jobs=-1,
+                                num_leaves=31, objective=None, random_state=123,
+                                reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+                                subsample_for_bin=200000, subsample_freq=0))],
+         verbose=False)
+2025-05-09 14:27:32,101:INFO:save_model() successfully completed......................................
+2025-05-09 14:28:12,381:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:28:12,381:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:28:12,381:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:28:12,381:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:28:12,729:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 14:28:13,663:WARNING:C:\Users\marco\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py:135: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '23.0.1', 'setuptools': '65.5.0', 'pycaret': '3.0.1', 'IPython': '8.36.0', 'ipywidgets': '8.1.7', 'tqdm': '4.67.1', 'numpy': '1.23.5', 'pandas': '1.5.3', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.2.2', 'pyod': '2.0.5', 'imblearn': '0.12.4', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.60.0', 'requests': '2.32.3', 'matplotlib': '3.10.1', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'kaleido': '0.2.1', 'statsmodels': '0.14.4', 'sktime': '0.17.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '7.0.0'}, 'python': {'version': '3.10.11', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '22.2.1', 'setuptools': '63.2.0', 'pycaret': '3.0.1', 'IPython': '8.36.0', 'ipywidgets': '8.1.7', 'tqdm': '4.67.1', 'numpy': '1.23.5', 'pandas': '1.5.3', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.2.2', 'pyod': '2.0.5', 'imblearn': '0.12.4', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.60.0', 'requests': '2.32.3', 'matplotlib': '3.10.1', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'kaleido': '0.2.1', 'statsmodels': '0.14.4', 'sktime': '0.17.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '7.0.0'}, 'python': {'version': '3.10.6', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2025-05-09 14:29:35,095:WARNING:C:\Users\marco\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py:135: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '23.0.1', 'setuptools': '65.5.0', 'pycaret': '3.0.1', 'IPython': '8.36.0', 'ipywidgets': '8.1.7', 'tqdm': '4.67.1', 'numpy': '1.23.5', 'pandas': '1.5.3', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.2.2', 'pyod': '2.0.5', 'imblearn': '0.12.4', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.60.0', 'requests': '2.32.3', 'matplotlib': '3.10.1', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'kaleido': '0.2.1', 'statsmodels': '0.14.4', 'sktime': '0.17.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '7.0.0'}, 'python': {'version': '3.10.11', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '22.2.1', 'setuptools': '63.2.0', 'pycaret': '3.0.1', 'IPython': '8.36.0', 'ipywidgets': '8.1.7', 'tqdm': '4.67.1', 'numpy': '1.23.5', 'pandas': '1.5.3', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.2.2', 'pyod': '2.0.5', 'imblearn': '0.12.4', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.60.0', 'requests': '2.32.3', 'matplotlib': '3.10.1', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'kaleido': '0.2.1', 'statsmodels': '0.14.4', 'sktime': '0.17.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '7.0.0'}, 'python': {'version': '3.10.6', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2025-05-09 14:29:35,116:INFO:Initializing predict_model()
+2025-05-09 14:29:35,116:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000015FD25544F0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\nicko\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model', LGBMClassifier(n_jobs=-1, random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000015F99735C60>)
+2025-05-09 14:29:35,116:INFO:Checking exceptions
+2025-05-09 14:29:35,116:INFO:Preloading libraries
+2025-05-09 14:29:35,116:INFO:Set up data.
+2025-05-09 14:29:35,123:INFO:Set up index.
+2025-05-09 14:29:54,063:WARNING:C:\Users\marco\AppData\Local\Programs\Python\Python310\lib\site-packages\pycaret\internal\pipeline.py:135: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '23.0.1', 'setuptools': '65.5.0', 'pycaret': '3.0.1', 'IPython': '8.36.0', 'ipywidgets': '8.1.7', 'tqdm': '4.67.1', 'numpy': '1.23.5', 'pandas': '1.5.3', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.2.2', 'pyod': '2.0.5', 'imblearn': '0.12.4', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.60.0', 'requests': '2.32.3', 'matplotlib': '3.10.1', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'kaleido': '0.2.1', 'statsmodels': '0.14.4', 'sktime': '0.17.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '7.0.0'}, 'python': {'version': '3.10.11', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '22.2.1', 'setuptools': '63.2.0', 'pycaret': '3.0.1', 'IPython': '8.36.0', 'ipywidgets': '8.1.7', 'tqdm': '4.67.1', 'numpy': '1.23.5', 'pandas': '1.5.3', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.2.2', 'pyod': '2.0.5', 'imblearn': '0.12.4', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.60.0', 'requests': '2.32.3', 'matplotlib': '3.10.1', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'kaleido': '0.2.1', 'statsmodels': '0.14.4', 'sktime': '0.17.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '7.0.0'}, 'python': {'version': '3.10.6', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2025-05-09 14:34:40,313:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:34:40,313:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:34:40,313:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:34:40,313:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:34:40,768:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 14:34:41,312:INFO:PyCaret ClassificationExperiment
+2025-05-09 14:34:41,312:INFO:Logging name: clf-default-name
+2025-05-09 14:34:41,312:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-05-09 14:34:41,312:INFO:version 3.0.1
+2025-05-09 14:34:41,312:INFO:Initializing setup()
+2025-05-09 14:34:41,312:INFO:self.USI: 4465
+2025-05-09 14:34:41,312:INFO:self._variable_keys: {'gpu_n_jobs_param', 'seed', 'USI', 'exp_name_log', '_ml_usecase', 'fold_generator', 'html_param', 'X', 'fold_groups_param', 'X_train', 'y_test', 'exp_id', 'y_train', 'data', 'fold_shuffle_param', '_available_plots', 'memory', 'X_test', 'logging_param', 'idx', 'log_plots_param', 'pipeline', 'y', 'is_multiclass', 'gpu_param', 'target_param', 'n_jobs_param', 'fix_imbalance'}
+2025-05-09 14:34:41,312:INFO:Checking environment
+2025-05-09 14:34:41,312:INFO:python_version: 3.10.11
+2025-05-09 14:34:41,312:INFO:python_build: ('tags/v3.10.11:7d4cc5a', 'Apr  5 2023 00:38:17')
+2025-05-09 14:34:41,312:INFO:machine: AMD64
+2025-05-09 14:34:41,329:INFO:platform: Windows-10-10.0.26100-SP0
+2025-05-09 14:34:41,329:INFO:Memory: svmem(total=34240745472, available=22855352320, percent=33.3, used=11385393152, free=22855352320)
+2025-05-09 14:34:41,329:INFO:Physical Core: 8
+2025-05-09 14:34:41,329:INFO:Logical Core: 16
+2025-05-09 14:34:41,329:INFO:Checking libraries
+2025-05-09 14:34:41,329:INFO:System:
+2025-05-09 14:34:41,329:INFO:    python: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+2025-05-09 14:34:41,329:INFO:executable: C:\Users\marco\AppData\Local\Programs\Python\Python310\python.exe
+2025-05-09 14:34:41,329:INFO:   machine: Windows-10-10.0.26100-SP0
+2025-05-09 14:34:41,329:INFO:PyCaret required dependencies:
+2025-05-09 14:34:41,346:INFO:                 pip: 23.0.1
+2025-05-09 14:34:41,346:INFO:          setuptools: 65.5.0
+2025-05-09 14:34:41,346:INFO:             pycaret: 3.0.1
+2025-05-09 14:34:41,346:INFO:             IPython: 8.36.0
+2025-05-09 14:34:41,346:INFO:          ipywidgets: 8.1.7
+2025-05-09 14:34:41,346:INFO:                tqdm: 4.67.1
+2025-05-09 14:34:41,346:INFO:               numpy: 1.23.5
+2025-05-09 14:34:41,346:INFO:              pandas: 1.5.3
+2025-05-09 14:34:41,346:INFO:              jinja2: 3.1.6
+2025-05-09 14:34:41,346:INFO:               scipy: 1.11.4
+2025-05-09 14:34:41,346:INFO:              joblib: 1.3.2
+2025-05-09 14:34:41,346:INFO:             sklearn: 1.2.2
+2025-05-09 14:34:41,346:INFO:                pyod: 2.0.5
+2025-05-09 14:34:41,346:INFO:            imblearn: 0.12.4
+2025-05-09 14:34:41,346:INFO:   category_encoders: 2.7.0
+2025-05-09 14:34:41,346:INFO:            lightgbm: 4.6.0
+2025-05-09 14:34:41,346:INFO:               numba: 0.60.0
+2025-05-09 14:34:41,346:INFO:            requests: 2.32.3
+2025-05-09 14:34:41,346:INFO:          matplotlib: 3.10.1
+2025-05-09 14:34:41,346:INFO:          scikitplot: 0.3.7
+2025-05-09 14:34:41,346:INFO:         yellowbrick: 1.5
+2025-05-09 14:34:41,346:INFO:              plotly: 5.24.1
+2025-05-09 14:34:41,346:INFO:             kaleido: 0.2.1
+2025-05-09 14:34:41,346:INFO:         statsmodels: 0.14.4
+2025-05-09 14:34:41,346:INFO:              sktime: 0.17.0
+2025-05-09 14:34:41,346:INFO:               tbats: 1.1.3
+2025-05-09 14:34:41,346:INFO:            pmdarima: 2.0.4
+2025-05-09 14:34:41,346:INFO:              psutil: 7.0.0
+2025-05-09 14:34:41,346:INFO:PyCaret optional dependencies:
+2025-05-09 14:34:41,363:INFO:                shap: Not installed
+2025-05-09 14:34:41,363:INFO:           interpret: Not installed
+2025-05-09 14:34:41,363:INFO:                umap: Not installed
+2025-05-09 14:34:41,363:INFO:    pandas_profiling: Not installed
+2025-05-09 14:34:41,363:INFO:  explainerdashboard: Not installed
+2025-05-09 14:34:41,363:INFO:             autoviz: Not installed
+2025-05-09 14:34:41,363:INFO:           fairlearn: Not installed
+2025-05-09 14:34:41,363:INFO:             xgboost: Not installed
+2025-05-09 14:34:41,363:INFO:            catboost: Not installed
+2025-05-09 14:34:41,363:INFO:              kmodes: Not installed
+2025-05-09 14:34:41,363:INFO:             mlxtend: Not installed
+2025-05-09 14:34:41,363:INFO:       statsforecast: Not installed
+2025-05-09 14:34:41,363:INFO:        tune_sklearn: Not installed
+2025-05-09 14:34:41,363:INFO:                 ray: Not installed
+2025-05-09 14:34:41,363:INFO:            hyperopt: Not installed
+2025-05-09 14:34:41,363:INFO:              optuna: Not installed
+2025-05-09 14:34:41,363:INFO:               skopt: Not installed
+2025-05-09 14:34:41,363:INFO:              mlflow: Not installed
+2025-05-09 14:34:41,363:INFO:              gradio: Not installed
+2025-05-09 14:34:41,363:INFO:             fastapi: Not installed
+2025-05-09 14:34:41,363:INFO:             uvicorn: Not installed
+2025-05-09 14:34:41,363:INFO:              m2cgen: Not installed
+2025-05-09 14:34:41,363:INFO:           evidently: Not installed
+2025-05-09 14:34:41,363:INFO:               fugue: Not installed
+2025-05-09 14:34:41,363:INFO:           streamlit: 1.45.0
+2025-05-09 14:34:41,363:INFO:             prophet: Not installed
+2025-05-09 14:34:41,363:INFO:None
+2025-05-09 14:34:41,363:INFO:Set up data.
+2025-05-09 14:34:41,363:INFO:Set up train/test split.
+2025-05-09 14:34:41,363:INFO:Set up index.
+2025-05-09 14:34:41,363:INFO:Set up folding strategy.
+2025-05-09 14:34:41,363:INFO:Assigning column types.
+2025-05-09 14:34:41,363:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-05-09 14:34:41,397:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-05-09 14:34:41,397:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-09 14:34:41,430:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:41,430:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:41,459:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-05-09 14:34:41,460:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-09 14:34:41,479:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:41,479:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:41,479:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-05-09 14:34:41,508:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-09 14:34:41,529:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:41,529:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:41,558:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-09 14:34:41,577:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:41,577:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:41,577:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-05-09 14:34:41,611:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:41,611:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:41,658:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:41,658:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:41,674:INFO:Preparing preprocessing pipeline...
+2025-05-09 14:34:41,674:INFO:Set up simple imputation.
+2025-05-09 14:34:41,674:INFO:Set up encoding of categorical features.
+2025-05-09 14:34:41,674:INFO:Set up removing outliers.
+2025-05-09 14:34:41,674:INFO:Set up imbalanced handling.
+2025-05-09 14:34:41,738:INFO:Finished creating preprocessing pipeline.
+2025-05-09 14:34:41,742:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\marco\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStoreP...
+                                                              verbose=0))),
+                ('remove_outliers',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RemoveOutliers(method='iforest',
+                                                               n_jobs=1,
+                                                               random_state=123,
+                                                               threshold=0.05))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              n_jobs=None,
+                                                                              random_state=None,
+                                                                              sampling_strategy='auto'))))],
+         verbose=False)
+2025-05-09 14:34:41,742:INFO:Creating final display dataframe.
+2025-05-09 14:34:41,911:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target          Response
+2                   Target type            Binary
+3           Original data shape        (1988, 26)
+4        Transformed data shape        (2907, 34)
+5   Transformed train set shape        (2310, 34)
+6    Transformed test set shape         (597, 34)
+7              Numeric features                23
+8          Categorical features                 2
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation              mean
+12       Categorical imputation              mode
+13     Maximum one-hot encoding                25
+14              Encoding method              None
+15              Remove outliers              True
+16           Outliers threshold              0.05
+17                Fix imbalance              True
+18         Fix imbalance method             SMOTE
+19               Fold Generator   StratifiedKFold
+20                  Fold Number                10
+21                     CPU Jobs                -1
+22                      Use GPU             False
+23               Log Experiment             False
+24              Experiment Name  clf-default-name
+25                          USI              4465
+2025-05-09 14:34:41,964:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:42,014:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:42,062:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:42,062:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 14:34:42,062:INFO:setup() successfully completed in 0.82s...............
+2025-05-09 14:34:42,062:INFO:Initializing compare_models()
+2025-05-09 14:34:42,062:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000215AE82BC40>, include=['lr', 'rf', 'lightgbm', 'gbc'], fold=None, round=4, cross_validation=True, sort=AUC, n_select=5, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x00000215AE82BC40>, 'include': ['lr', 'rf', 'lightgbm', 'gbc'], 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'AUC', 'n_select': 5, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>}, exclude=None)
+2025-05-09 14:34:42,062:INFO:Checking exceptions
+2025-05-09 14:34:42,062:INFO:Preparing display monitor
+2025-05-09 14:34:42,062:INFO:Initializing Logistic Regression
+2025-05-09 14:34:42,062:INFO:Total runtime is 0.0 minutes
+2025-05-09 14:34:42,062:INFO:SubProcess create_model() called ==================================
+2025-05-09 14:34:42,062:INFO:Initializing create_model()
+2025-05-09 14:34:42,062:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000215AE82BC40>, estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000215F8891C60>, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:34:42,062:INFO:Checking exceptions
+2025-05-09 14:34:42,062:INFO:Importing libraries
+2025-05-09 14:34:42,062:INFO:Copying training dataset
+2025-05-09 14:34:42,062:INFO:Defining folds
+2025-05-09 14:34:42,062:INFO:Declaring metric variables
+2025-05-09 14:34:42,062:INFO:Importing untrained model
+2025-05-09 14:34:42,062:INFO:Logistic Regression Imported successfully
+2025-05-09 14:34:42,062:INFO:Starting cross validation
+2025-05-09 14:34:42,062:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-09 14:34:45,866:INFO:Calculating mean and std
+2025-05-09 14:34:45,866:INFO:Creating metrics dataframe
+2025-05-09 14:34:45,947:INFO:Uploading results into container
+2025-05-09 14:34:45,947:INFO:Uploading model into container now
+2025-05-09 14:34:45,947:INFO:_master_model_container: 1
+2025-05-09 14:34:45,947:INFO:_display_container: 2
+2025-05-09 14:34:45,947:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2025-05-09 14:34:45,947:INFO:create_model() successfully completed......................................
+2025-05-09 14:34:46,012:INFO:SubProcess create_model() end ==================================
+2025-05-09 14:34:46,012:INFO:Creating metrics dataframe
+2025-05-09 14:34:46,012:INFO:Initializing Random Forest Classifier
+2025-05-09 14:34:46,012:INFO:Total runtime is 0.0658342719078064 minutes
+2025-05-09 14:34:46,012:INFO:SubProcess create_model() called ==================================
+2025-05-09 14:34:46,012:INFO:Initializing create_model()
+2025-05-09 14:34:46,012:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000215AE82BC40>, estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000215F8891C60>, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:34:46,012:INFO:Checking exceptions
+2025-05-09 14:34:46,012:INFO:Importing libraries
+2025-05-09 14:34:46,012:INFO:Copying training dataset
+2025-05-09 14:34:46,029:INFO:Defining folds
+2025-05-09 14:34:46,029:INFO:Declaring metric variables
+2025-05-09 14:34:46,029:INFO:Importing untrained model
+2025-05-09 14:34:46,030:INFO:Random Forest Classifier Imported successfully
+2025-05-09 14:34:46,030:INFO:Starting cross validation
+2025-05-09 14:34:46,030:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-09 14:34:48,700:INFO:Calculating mean and std
+2025-05-09 14:34:48,700:INFO:Creating metrics dataframe
+2025-05-09 14:34:48,797:INFO:Uploading results into container
+2025-05-09 14:34:48,798:INFO:Uploading model into container now
+2025-05-09 14:34:48,798:INFO:_master_model_container: 2
+2025-05-09 14:34:48,798:INFO:_display_container: 2
+2025-05-09 14:34:48,798:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False)
+2025-05-09 14:34:48,798:INFO:create_model() successfully completed......................................
+2025-05-09 14:34:48,852:INFO:SubProcess create_model() end ==================================
+2025-05-09 14:34:48,852:INFO:Creating metrics dataframe
+2025-05-09 14:34:48,863:INFO:Initializing Light Gradient Boosting Machine
+2025-05-09 14:34:48,863:INFO:Total runtime is 0.11335084438323975 minutes
+2025-05-09 14:34:48,864:INFO:SubProcess create_model() called ==================================
+2025-05-09 14:34:48,864:INFO:Initializing create_model()
+2025-05-09 14:34:48,864:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000215AE82BC40>, estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000215F8891C60>, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:34:48,864:INFO:Checking exceptions
+2025-05-09 14:34:48,864:INFO:Importing libraries
+2025-05-09 14:34:48,864:INFO:Copying training dataset
+2025-05-09 14:34:48,868:INFO:Defining folds
+2025-05-09 14:34:48,868:INFO:Declaring metric variables
+2025-05-09 14:34:48,868:INFO:Importing untrained model
+2025-05-09 14:34:48,868:INFO:Light Gradient Boosting Machine Imported successfully
+2025-05-09 14:34:48,868:INFO:Starting cross validation
+2025-05-09 14:34:48,868:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-09 14:34:50,044:INFO:Calculating mean and std
+2025-05-09 14:34:50,044:INFO:Creating metrics dataframe
+2025-05-09 14:34:50,138:INFO:Uploading results into container
+2025-05-09 14:34:50,138:INFO:Uploading model into container now
+2025-05-09 14:34:50,138:INFO:_master_model_container: 3
+2025-05-09 14:34:50,138:INFO:_display_container: 2
+2025-05-09 14:34:50,138:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2025-05-09 14:34:50,138:INFO:create_model() successfully completed......................................
+2025-05-09 14:34:50,208:INFO:SubProcess create_model() end ==================================
+2025-05-09 14:34:50,208:INFO:Creating metrics dataframe
+2025-05-09 14:34:50,212:INFO:Initializing Gradient Boosting Classifier
+2025-05-09 14:34:50,212:INFO:Total runtime is 0.1358360250790914 minutes
+2025-05-09 14:34:50,212:INFO:SubProcess create_model() called ==================================
+2025-05-09 14:34:50,212:INFO:Initializing create_model()
+2025-05-09 14:34:50,212:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000215AE82BC40>, estimator=gbc, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000215F8891C60>, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:34:50,212:INFO:Checking exceptions
+2025-05-09 14:34:50,212:INFO:Importing libraries
+2025-05-09 14:34:50,212:INFO:Copying training dataset
+2025-05-09 14:34:50,217:INFO:Defining folds
+2025-05-09 14:34:50,217:INFO:Declaring metric variables
+2025-05-09 14:34:50,217:INFO:Importing untrained model
+2025-05-09 14:34:50,217:INFO:Gradient Boosting Classifier Imported successfully
+2025-05-09 14:34:50,217:INFO:Starting cross validation
+2025-05-09 14:34:50,218:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-09 14:34:51,293:INFO:Calculating mean and std
+2025-05-09 14:34:51,293:INFO:Creating metrics dataframe
+2025-05-09 14:34:51,388:INFO:Uploading results into container
+2025-05-09 14:34:51,388:INFO:Uploading model into container now
+2025-05-09 14:34:51,388:INFO:_master_model_container: 4
+2025-05-09 14:34:51,388:INFO:_display_container: 2
+2025-05-09 14:34:51,388:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2025-05-09 14:34:51,388:INFO:create_model() successfully completed......................................
+2025-05-09 14:34:51,448:INFO:SubProcess create_model() end ==================================
+2025-05-09 14:34:51,448:INFO:Creating metrics dataframe
+2025-05-09 14:34:51,453:INFO:Initializing create_model()
+2025-05-09 14:34:51,453:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000215AE82BC40>, estimator=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:34:51,453:INFO:Checking exceptions
+2025-05-09 14:34:51,453:INFO:Importing libraries
+2025-05-09 14:34:51,453:INFO:Copying training dataset
+2025-05-09 14:34:51,460:INFO:Defining folds
+2025-05-09 14:34:51,460:INFO:Declaring metric variables
+2025-05-09 14:34:51,460:INFO:Importing untrained model
+2025-05-09 14:34:51,461:INFO:Declaring custom model
+2025-05-09 14:34:51,461:INFO:Light Gradient Boosting Machine Imported successfully
+2025-05-09 14:34:51,461:INFO:Cross validation set to False
+2025-05-09 14:34:51,461:INFO:Fitting Model
+2025-05-09 14:34:51,528:INFO:[LightGBM] [Warning] Found whitespace in feature_names, replace with underlines
+2025-05-09 14:34:51,529:INFO:[LightGBM] [Info] Number of positive: 1155, number of negative: 1155
+2025-05-09 14:34:51,530:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000918 seconds.
+2025-05-09 14:34:51,530:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-05-09 14:34:51,530:INFO:[LightGBM] [Info] Total Bins 6044
+2025-05-09 14:34:51,530:INFO:[LightGBM] [Info] Number of data points in the train set: 2310, number of used features: 32
+2025-05-09 14:34:51,532:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-05-09 14:34:51,698:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2025-05-09 14:34:51,698:INFO:create_model() successfully completed......................................
+2025-05-09 14:34:51,761:INFO:Initializing create_model()
+2025-05-09 14:34:51,761:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000215AE82BC40>, estimator=GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:34:51,761:INFO:Checking exceptions
+2025-05-09 14:34:51,762:INFO:Importing libraries
+2025-05-09 14:34:51,762:INFO:Copying training dataset
+2025-05-09 14:34:51,766:INFO:Defining folds
+2025-05-09 14:34:51,766:INFO:Declaring metric variables
+2025-05-09 14:34:51,766:INFO:Importing untrained model
+2025-05-09 14:34:51,766:INFO:Declaring custom model
+2025-05-09 14:34:51,767:INFO:Gradient Boosting Classifier Imported successfully
+2025-05-09 14:34:51,767:INFO:Cross validation set to False
+2025-05-09 14:34:51,767:INFO:Fitting Model
+2025-05-09 14:34:51,910:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2025-05-09 14:34:51,910:INFO:create_model() successfully completed......................................
+2025-05-09 14:34:51,973:INFO:Initializing create_model()
+2025-05-09 14:34:51,973:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000215AE82BC40>, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:34:51,973:INFO:Checking exceptions
+2025-05-09 14:34:51,974:INFO:Importing libraries
+2025-05-09 14:34:51,974:INFO:Copying training dataset
+2025-05-09 14:34:51,979:INFO:Defining folds
+2025-05-09 14:34:51,979:INFO:Declaring metric variables
+2025-05-09 14:34:51,979:INFO:Importing untrained model
+2025-05-09 14:34:51,979:INFO:Declaring custom model
+2025-05-09 14:34:51,980:INFO:Random Forest Classifier Imported successfully
+2025-05-09 14:34:51,980:INFO:Cross validation set to False
+2025-05-09 14:34:51,980:INFO:Fitting Model
+2025-05-09 14:34:52,142:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False)
+2025-05-09 14:34:52,142:INFO:create_model() successfully completed......................................
+2025-05-09 14:34:52,202:INFO:Initializing create_model()
+2025-05-09 14:34:52,202:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000215AE82BC40>, estimator=LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 14:34:52,202:INFO:Checking exceptions
+2025-05-09 14:34:52,202:INFO:Importing libraries
+2025-05-09 14:34:52,202:INFO:Copying training dataset
+2025-05-09 14:34:52,209:INFO:Defining folds
+2025-05-09 14:34:52,209:INFO:Declaring metric variables
+2025-05-09 14:34:52,209:INFO:Importing untrained model
+2025-05-09 14:34:52,209:INFO:Declaring custom model
+2025-05-09 14:34:52,209:INFO:Logistic Regression Imported successfully
+2025-05-09 14:34:52,210:INFO:Cross validation set to False
+2025-05-09 14:34:52,210:INFO:Fitting Model
+2025-05-09 14:34:52,348:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2025-05-09 14:34:52,348:INFO:create_model() successfully completed......................................
+2025-05-09 14:34:52,408:INFO:_master_model_container: 4
+2025-05-09 14:34:52,408:INFO:_display_container: 2
+2025-05-09 14:34:52,408:INFO:[LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0), GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False), RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)]
+2025-05-09 14:34:52,408:INFO:compare_models() successfully completed......................................
+2025-05-09 14:34:52,408:INFO:Initializing predict_model()
+2025-05-09 14:34:52,408:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000215AE82BC40>, estimator=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000215F862E320>)
+2025-05-09 14:34:52,408:INFO:Checking exceptions
+2025-05-09 14:34:52,408:INFO:Preloading libraries
+2025-05-09 14:34:52,408:INFO:Set up data.
+2025-05-09 14:34:52,419:INFO:Set up index.
+2025-05-09 14:34:52,557:INFO:Initializing save_model()
+2025-05-09 14:34:52,557:INFO:save_model(model=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0), model_name=./pickle/pickle_rf_pycaret2, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\marco\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStoreP...
+                                                              verbose=0))),
+                ('remove_outliers',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RemoveOutliers(method='iforest',
+                                                               n_jobs=1,
+                                                               random_state=123,
+                                                               threshold=0.05))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              n_jobs=None,
+                                                                              random_state=None,
+                                                                              sampling_strategy='auto'))))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2025-05-09 14:34:52,557:INFO:Adding model into prep_pipe
+2025-05-09 14:34:52,564:INFO:./pickle/pickle_rf_pycaret2.pkl saved in current working directory
+2025-05-09 14:34:52,575:INFO:Pipeline(memory=FastMemory(location=C:\Users\marco\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStoreP...
+                 LGBMClassifier(boosting_type='gbdt', class_weight=None,
+                                colsample_bytree=1.0, importance_type='split',
+                                learning_rate=0.1, max_depth=-1,
+                                min_child_samples=20, min_child_weight=0.001,
+                                min_split_gain=0.0, n_estimators=100, n_jobs=-1,
+                                num_leaves=31, objective=None, random_state=123,
+                                reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+                                subsample_for_bin=200000, subsample_freq=0))],
+         verbose=False)
+2025-05-09 14:34:52,575:INFO:save_model() successfully completed......................................
+2025-05-09 14:37:12,416:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:37:12,416:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:37:12,416:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:37:12,416:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 14:37:12,773:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 14:37:31,222:INFO:Initializing predict_model()
+2025-05-09 14:37:31,222:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000022938ED44F0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\marco\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model', LGBMClassifier(n_jobs=-1, random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000022938EADD80>)
+2025-05-09 14:37:31,222:INFO:Checking exceptions
+2025-05-09 14:37:31,222:INFO:Preloading libraries
+2025-05-09 14:37:31,222:INFO:Set up data.
+2025-05-09 14:37:31,229:INFO:Set up index.
+2025-05-09 14:37:33,792:WARNING:C:\Users\marco\OneDrive\Desktop\FIAP - 2o ANO\FRONTEND\CP2-Front\app.py:123: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots()
+
