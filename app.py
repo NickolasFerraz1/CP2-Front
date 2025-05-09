@@ -19,45 +19,83 @@ st.set_page_config(page_title='Simulador - Case Ifood',
 # Sidebar com configurações básicas
 st.sidebar.image('./images/logo_fiap.png', width=100)
 st.sidebar.subheader('Auto ML - Fiap [v2]')
-compatibility_mode = True
+compatibility_mode = False
 
-# --- Carregamento do Modelo com tratamento de erros ---
-if not compatibility_mode:
-    try:
-        # st.info("Tentando carregar o modelo...") # Removed
-        
-        # Tenta diferentes métodos de carregamento
-        try:
-            mdl_rf = load('./pickle/pickle_rf_pycaret2.pkl')
-            # st.success("Modelo carregado com sucesso usando joblib.load!") # Removed
-        except Exception as e1:
-            # st.warning(f"Erro ao carregar com joblib.load: {str(e1)}") # Removed
-            
-            try:
-                # Tenta carregamento alternativo com pickle
-                with open('./pickle/pickle_rf_pycaret2.pkl', 'rb') as f:
-                    mdl_rf = pickle.load(f)
-                # st.success("Modelo carregado com sucesso usando pickle.load!") # Removed
-            except Exception as e2:
-                # st.warning(f"Erro ao carregar com pickle.load: {str(e2)}") # Removed
-                
-                try:
-                    # Tenta carregamento com pycaret (que pode ter formato diferente)
-                    mdl_rf = load_model('./pickle/pickle_rf_pycaret2')
-                    # st.success("Modelo carregado com sucesso usando pycaret load_model!") # Removed
-                except Exception as e3:
-                    st.error(f"Todas as tentativas de carregamento falharam.")
-                    st.error(f"Erros: \n1. {str(e1)}\n2. {str(e2)}\n3. {str(e3)}")
-                    st.error("O arquivo pickle pode ser incompatível devido a diferenças de versão do Python ou bibliotecas.")
-                    st.error("Possíveis soluções: Obtenha o código fonte usado para treinar o modelo ou solicite um modelo exportado com versões compatíveis.")
-                    st.stop()
-    except Exception as e:
-        st.error(f"Erro ao carregar modelo: {str(e)}")
-        st.error("Verifique se o arquivo pickle existe e está correto")
-        st.stop()
+# --- Bloco de Carregamento do Modelo com controle de mensagens via st.session_state ---
+mdl_rf = None  # Inicializa mdl_rf para garantir que está no escopo
+
+# Verificar se o modelo já foi carregado e está na session_state
+if 'mdl_rf_object' in st.session_state and st.session_state.mdl_rf_object is not None:
+    mdl_rf = st.session_state.mdl_rf_object
+    # Nenhuma mensagem é mostrada aqui, pois o modelo já foi carregado anteriormente.
 else:
-    # st.warning("⚠️ Executando em modo de compatibilidade - O modelo não será carregado e as predições retornarão valores aleatórios apenas para teste da interface.") # Removed
-    pass # Mantém o bloco else para clareza, mas sem ação
+    # Modelo não está na sessão, então tentamos carregar.
+    # As mensagens só serão mostradas nesta primeira tentativa da sessão.
+    if not compatibility_mode: # Esta condição é True, pois compatibility_mode é False
+        st.info("Tentando carregar o modelo...")
+        
+        model_loaded_successfully_this_attempt = False
+        e1, e2, e3 = None, None, None # Para armazenar mensagens de erro específicas
+
+        try:
+            # Tentativa 1: joblib
+            mdl_rf = load('./pickle/pickle_rf_pycaret2.pkl')
+            st.success("Modelo carregado com sucesso usando joblib.load!")
+            st.session_state.mdl_rf_object = mdl_rf # Armazena na sessão
+            model_loaded_successfully_this_attempt = True
+        except Exception as exc1:
+            e1 = exc1
+            st.warning(f"Erro ao carregar com joblib.load: {str(e1)}")
+            
+            if not model_loaded_successfully_this_attempt:
+                try:
+                    # Tentativa 2: pickle
+                    with open('./pickle/pickle_rf_pycaret2.pkl', 'rb') as f:
+                        mdl_rf = pickle.load(f)
+                    st.success("Modelo carregado com sucesso usando pickle.load!")
+                    st.session_state.mdl_rf_object = mdl_rf
+                    model_loaded_successfully_this_attempt = True
+                except Exception as exc2:
+                    e2 = exc2
+                    st.warning(f"Erro ao carregar com pickle.load: {str(e2)}")
+                    
+                    if not model_loaded_successfully_this_attempt:
+                        try:
+                            # Tentativa 3: pycaret
+                            mdl_rf = load_model('./pickle/pickle_rf_pycaret2')
+                            st.success("Modelo carregado com sucesso usando pycaret.load_model!")
+                            st.session_state.mdl_rf_object = mdl_rf
+                            model_loaded_successfully_this_attempt = True
+                        except Exception as exc3:
+                            e3 = exc3
+                            # Todas as tentativas falharam
+                            st.error(f"Todas as tentativas de carregamento falharam.")
+                            error_details = []
+                            if e1: error_details.append(f"1. Joblib: {str(e1)}")
+                            if e2: error_details.append(f"2. Pickle: {str(e2)}")
+                            if e3: error_details.append(f"3. PyCaret: {str(e3)}")
+                            st.error("Erros:\n" + "\n".join(error_details))
+                            st.error("O arquivo pickle pode ser incompatível devido a diferenças de versão do Python ou bibliotecas.")
+                            st.error("Possíveis soluções: Obtenha o código fonte usado para treinar o modelo ou solicite um modelo exportado com versões compatíveis.")
+                            st.session_state.mdl_rf_object = None # Garante que não há modelo na sessão
+                            st.stop()
+        
+        # Verificação final: se o modelo não foi carregado com sucesso nesta tentativa, e não parou antes.
+        if not model_loaded_successfully_this_attempt:
+            # Isso não deveria ser alcançado se st.stop() foi chamado, mas é uma salvaguarda.
+            st.error("ERRO INESPERADO: O modelo não foi carregado após todas as tentativas e o script não parou.")
+            st.session_state.mdl_rf_object = None
+            st.stop()
+    # Se compatibility_mode fosse True, não faria nada aqui, mdl_rf permaneceria None.
+
+# Após o bloco de carregamento, verificar se mdl_rf é None (o que indicaria falha no carregamento ou modo de compatibilidade)
+if not compatibility_mode and mdl_rf is None:
+    # Se mdl_rf ainda é None, significa que st.session_state.mdl_rf_object não foi definido ou foi definido como None.
+    # E st.stop() deveria ter sido chamado. Se chegamos aqui, é um estado inconsistente.
+    st.error("Falha crítica: O modelo não está disponível. A aplicação não pode continuar.")
+    st.info("Isso pode ocorrer se o carregamento inicial do modelo falhou e a aplicação foi de alguma forma continuada. Verifique os logs.")
+    st.stop()
+# --- Fim do Bloco de Carregamento do Modelo ---
 
 st.title('Simulador - Conversão de Vendas')
 with st.expander('Descrição do App', expanded=False):
@@ -128,35 +166,71 @@ if database == 'CSV':
         st.subheader('📄 Visualização dos Dados e Predições')
  
         with st.expander("Visualizar Dados CSV", expanded=False):
-            col1, col2 = st.columns([1, 1])
-            with col1:
-                qtd = st.slider("Quantas linhas mostrar?", 5, min(100, Xtest.shape[0]), step=5, value=5)
-            with col2:
-                if Xtest.shape[1] > 10:
-                    show_all_cols = st.checkbox("Mostrar todas as colunas", False)
-                    if not show_all_cols:
-                        num_cols = st.slider("Quantas colunas mostrar?", 5, min(30, Xtest.shape[1]), step=5, value=10)
-                        # Seleciona colunas mais importantes ou interessantes
-                        selected_cols = ['ID'] if 'ID' in Xtest.columns else []
-                        # Adiciona colunas categóricas e binárias primeiro
-                        cat_cols = [col for col in Xtest.columns if Xtest[col].dtype == 'object' 
-                                  or (Xtest[col].nunique() <= 5 and col not in selected_cols)]
-                        selected_cols.extend(cat_cols[:min(5, len(cat_cols))])
-                        # Adiciona colunas numéricas
-                        num_cols_list = [col for col in Xtest.columns if col not in selected_cols 
-                                       and Xtest[col].dtype in [np.float64, np.int64]]
-                        selected_cols.extend(num_cols_list[:num_cols-len(selected_cols)])
-                        
-                        # Verifica se 'Response' existe e a adiciona se não estiver
-                        if 'Response' in Xtest.columns and 'Response' not in selected_cols:
-                            selected_cols.append('Response')
-                            
-                        # Exibe tabela com colunas selecionadas
-                        st.dataframe(Xtest[selected_cols].head(qtd))
-                    else:
-                        st.dataframe(Xtest.head(qtd))
-                else:
-                    st.dataframe(Xtest.head(qtd))
+            # Container estilizado para os controles de visualização
+            with st.container():
+                st.markdown("##### Configurações de Visualização")
+                config_cols = st.columns([2, 2, 3])
+                
+                with config_cols[0]:
+                    qtd = st.slider("Linhas a exibir", 5, min(100, Xtest.shape[0]), step=5, value=5)
+                
+                with config_cols[1]:
+                    if Xtest.shape[1] > 10:
+                        show_all_cols = st.checkbox("Mostrar todas as colunas", False)
+                
+                with config_cols[2]:
+                    if Xtest.shape[1] > 10 and not show_all_cols:
+                        num_cols = st.slider("Número de colunas", 5, min(30, Xtest.shape[1]), step=5, value=10)
+            
+            # Seção para exibir estatísticas básicas do dataset
+            st.markdown("##### Resumo do Dataset")
+            summary_cols = st.columns(4)
+            
+            with summary_cols[0]:
+                st.metric("Total de Linhas", f"{Xtest.shape[0]}")
+            with summary_cols[1]:
+                st.metric("Total de Colunas", f"{Xtest.shape[1]}")
+            
+            # Corrigido: Lógica para contagem mutuamente exclusiva de colunas numéricas e categóricas para o resumo
+            numeric_col_names_for_summary = {col for col in Xtest.columns if Xtest[col].dtype in [np.float64, np.int64]}
+            
+            categorical_col_names_for_summary = {
+                col for col in Xtest.columns 
+                if (Xtest[col].dtype == 'object') or \
+                   (col not in numeric_col_names_for_summary and Xtest[col].nunique() <= 5)
+            }
+
+            with summary_cols[2]:
+                st.metric("Colunas Numéricas", f"{len(numeric_col_names_for_summary)}")
+            with summary_cols[3]:
+                st.metric("Colunas Categóricas", f"{len(categorical_col_names_for_summary)}")
+            
+            # Container para a visualização do dataframe
+            st.markdown("##### Dados Carregados")
+            
+            if Xtest.shape[1] > 10 and not show_all_cols:
+                # Seleciona colunas mais importantes ou interessantes
+                selected_cols = ['ID'] if 'ID' in Xtest.columns else []
+                
+                # Adiciona colunas categóricas e binárias primeiro
+                cat_cols = [col for col in Xtest.columns if Xtest[col].dtype == 'object' 
+                          or (Xtest[col].nunique() <= 5 and col not in selected_cols)]
+                selected_cols.extend(cat_cols[:min(5, len(cat_cols))])
+                
+                # Adiciona colunas numéricas
+                num_cols_list = [col for col in Xtest.columns if col not in selected_cols 
+                               and Xtest[col].dtype in [np.float64, np.int64]]
+                selected_cols.extend(num_cols_list[:num_cols-len(selected_cols)])
+                
+                # Verifica se 'Response' existe e a adiciona se não estiver
+                if 'Response' in Xtest.columns and 'Response' not in selected_cols:
+                    selected_cols.append('Response')
+                
+                # Exibe tabela com colunas selecionadas e mensagem informativa
+                st.info(f"Exibindo {len(selected_cols)} de {Xtest.shape[1]} colunas. Use 'Mostrar todas as colunas' para ver o dataset completo.")
+                st.dataframe(Xtest[selected_cols].head(qtd), height=min(350, qtd * 35 + 38))
+            else:
+                st.dataframe(Xtest.head(qtd), height=min(350, qtd * 35 + 38))
  
         with st.expander("Visualizar Predições", expanded=True):
             # Layout mais compacto para as métricas
@@ -166,6 +240,7 @@ if database == 'CSV':
             ypred['final_pred'] = (ypred['prediction_score_1'] >= threshold).astype(int)
             
             # Layout com mais colunas para melhor uso em telas ultrawide
+            st.markdown("##### Métricas Gerais")
             metric_cols = st.columns(4)
             metric_cols[0].metric("Positivos (1)", ypred['final_pred'].sum())
             metric_cols[1].metric("Negativos (0)", len(ypred) - ypred['final_pred'].sum())
@@ -174,26 +249,45 @@ if database == 'CSV':
             positive_rate = (ypred['final_pred'].sum() / len(ypred)) * 100
             metric_cols[2].metric("Taxa de conversão", f"{positive_rate:.1f}%")
             
-            # Score médio
-            avg_score = ypred['prediction_score_1'].mean() * 100
+            # Score médio - CORRIGIDO para refletir o threshold
+            df_positivos_preditos = ypred[ypred['final_pred'] == 1]
+            if not df_positivos_preditos.empty:
+                avg_score = df_positivos_preditos['prediction_score_1'].mean() * 100
+            else:
+                avg_score = 0.0  # Se não houver positivos preditos, score médio é 0
+            
             metric_cols[3].metric("Score médio", f"{avg_score:.1f}%")
             
-            # Definir opções de visualização
-            view_options = st.columns([1, 1, 2])
+            # Separador visual
+            st.markdown("---")
+            
+            # Configurações de visualização da tabela de predições
+            st.markdown("##### Configurar Visualização")
+            
+            view_options = st.columns([2, 2, 4])
             with view_options[0]:
-                tipo = st.radio("Visualização:", ['Completa', 'Compacta'], index=1)
+                tipo = st.radio("Tipo:", ['Completa', 'Compacta'], index=1)
             with view_options[1]:
-                qtd_show = st.slider("Linhas", 5, min(50, len(ypred)), 10, step=5)
+                qtd_show = st.slider("Linhas a exibir", 5, min(50, len(ypred)), 10, step=5)
             with view_options[2]:
                 filter_option = st.radio("Filtrar por:", ['Todos', 'Apenas conversões (1)', 'Apenas não-conversões (0)'], horizontal=True)
             
             # Aplicar filtro se necessário
             if filter_option == 'Apenas conversões (1)':
                 view_df = ypred[ypred['final_pred'] == 1]
+                if len(view_df) == 0:
+                    st.warning("Não há registros com conversão = 1. Mostrando todos os registros.")
+                    view_df = ypred
             elif filter_option == 'Apenas não-conversões (0)':
                 view_df = ypred[ypred['final_pred'] == 0]
+                if len(view_df) == 0:
+                    st.warning("Não há registros com conversão = 0. Mostrando todos os registros.")
+                    view_df = ypred
             else:
                 view_df = ypred
+            
+            # Informação sobre o conjunto filtrado
+            st.markdown(f"##### Resultados ({len(view_df)} registros)")
             
             # Determinar quais colunas mostrar
             if tipo == 'Completa':
@@ -219,15 +313,27 @@ if database == 'CSV':
                         return f'background-color: rgba(255, 0, 0, {min(1-val, 0.8)})'
                 return ''
             
+            # Configuração de formatação
+            formatting = {
+                'prediction_score_1': '{:.1%}'
+            }
+            
+            # Adicione formatação para colunas numéricas comuns
+            for col in ['Income', 'MntWines', 'MntMeatProducts', 'MntFishProducts', 'MntSweetProducts', 'MntGoldProds']:
+                if col in columns_to_show:
+                    formatting[col] = '${:,.0f}'
+            
             # Exibir a tabela com formatação melhorada
             st.dataframe(
                 view_df[columns_to_show].head(qtd_show).style.applymap(
                     color_pred, subset=['prediction_score_1']
-                ).format({
-                    'prediction_score_1': '{:.1%}'
-                }),
+                ).format(formatting),
                 height=min(qtd_show * 35 + 38, 450)  # Altura dinâmica baseada no número de linhas
             )
+            
+            # Informação adicional sobre a visualização
+            if tipo == 'Compacta':
+                st.info(f"Exibição compacta: mostrando {len(columns_to_show)} de {view_df.shape[1]} colunas. Alterne para 'Completa' para ver todas as variáveis.")
  
         # Analytics Tab
         with st.expander("📊 Análise Comparativa (Analytics)", expanded=True):
@@ -340,43 +446,46 @@ if database == 'CSV':
             tabs = st.tabs(["Automático", "Boxplot", "Histogramas", "Densidade"])
             
             with tabs[0]: # Aba Automático
-                # Identificar colunas categóricas e numéricas no dataset
-                all_cols = [col for col in Xtest.columns if col not in ['ID', 'Z_CostContact', 'Z_Revenue', 'Response']]
-                
                 # Detecta tipos de colunas
-                categorical_cols = []
-                numerical_cols = []
+                initial_categorical_cols = [] # Renomeado para clareza
+                initial_numerical_cols = []   # Renomeado para clareza
                 
-                for col in all_cols:
-                    # Verifica se a coluna é categórica (objeto, string ou poucos valores únicos)
+                for col in Xtest.columns:
                     if Xtest[col].dtype == 'object' or Xtest[col].nunique() <= 5:
-                        categorical_cols.append(col)
-                    # Se for numérica
+                        initial_categorical_cols.append(col)
                     elif Xtest[col].dtype in [np.float64, np.int64]:
-                        numerical_cols.append(col)
+                        initial_numerical_cols.append(col)
                 
-                # Limitar o número de colunas para visualização
-                categorical_cols = categorical_cols[:max_vars]
-                numerical_cols = numerical_cols[:max_vars]
+                # Determinar as colunas a serem plotadas na aba Automático
+                numerical_cols_for_auto_plot = []
+                categorical_cols_for_auto_plot = []
+
+                if show_controls and selected_features_multiselect: # selected_features_multiselect vem do bloco de controles avançados
+                    numerical_cols_for_auto_plot = [col for col in initial_numerical_cols if col in selected_features_multiselect]
+                else:
+                    numerical_cols_for_auto_plot = initial_numerical_cols[:max_vars]
+                
+                # Colunas categóricas na aba Automático são sempre limitadas por max_vars
+                categorical_cols_for_auto_plot = initial_categorical_cols[:max_vars]
                 
                 # Informações sobre os tipos identificados
-                st.markdown(f"**Detecção automática:** {len(categorical_cols)} colunas categóricas, {len(numerical_cols)} colunas numéricas")
+                st.markdown(f"**Detecção automática:** {len(categorical_cols_for_auto_plot)} colunas categóricas, {len(numerical_cols_for_auto_plot)} colunas numéricas")
                 
                 # Gráficos para colunas categóricas (barras)
-                if categorical_cols:
+                if categorical_cols_for_auto_plot:
                     st.markdown("#### Colunas Categóricas (Gráficos de Barras)")
                     
-                    cols = st.columns(num_columns)
-                    col_idx = 0
+                    cols_cat_auto = st.columns(num_columns) 
+                    col_idx_cat_auto = 0
                     
-                    for col in categorical_cols:
-                        with cols[col_idx % num_columns]:
+                    for col_cat_auto in categorical_cols_for_auto_plot: # Usar a lista filtrada/limitada
+                        with cols_cat_auto[col_idx_cat_auto % num_columns]:
                             plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
                             fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
                             
                             # Contagem de valores para cada classe
-                            cat_counts_0 = y0[col].value_counts().sort_index()
-                            cat_counts_1 = y1[col].value_counts().sort_index()
+                            cat_counts_0 = y0[col_cat_auto].value_counts().sort_index()
+                            cat_counts_1 = y1[col_cat_auto].value_counts().sort_index()
                             
                             # Obter todas as categorias únicas
                             all_categories = sorted(list(set(list(cat_counts_0.index) + list(cat_counts_1.index))))
@@ -401,13 +510,13 @@ if database == 'CSV':
                                 ax.set_xticks(x)
                                 ax.set_xticklabels(all_categories)
                                 
-                            ax.set_title(f'{col}', fontsize=font_size)
+                            ax.set_title(f'{col_cat_auto}', fontsize=font_size)
                             ax.tick_params(labelsize=font_size-1)
                             ax.legend(fontsize=font_size-2)
                             
                             # Rótulos
                             if show_labels:
-                                ax.set_xlabel(col, fontsize=font_size-1)
+                                ax.set_xlabel(col_cat_auto, fontsize=font_size-1)
                                 ax.set_ylabel('Contagem', fontsize=font_size-1)
                             else:
                                 ax.set_xlabel('')
@@ -416,16 +525,16 @@ if database == 'CSV':
                             plt.tight_layout(pad=1.2)
                             st.pyplot(fig)
                             plt.close(fig)  # Liberar memória
-                        col_idx += 1
+                        col_idx_cat_auto += 1
                 
                 # Gráficos para colunas numéricas (boxplots)
-                if numerical_cols:
+                if numerical_cols_for_auto_plot:
                     st.markdown("#### Colunas Numéricas (Boxplots)")
                     
-                    cols_auto = st.columns(num_columns) # Usar num_columns definido pela lógica acima
+                    cols_auto = st.columns(num_columns) 
                     col_idx_auto = 0
                     
-                    for col_auto in numerical_cols: # numerical_cols é definido dentro desta aba
+                    for col_auto in numerical_cols_for_auto_plot: # Usar a lista filtrada/limitada
                         with cols_auto[col_idx_auto % num_columns]:
                             plt.figure(figsize=(fig_width, fig_height), dpi=dpi_val)
                             fig_auto, ax_auto = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
