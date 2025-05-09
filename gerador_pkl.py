@@ -80,9 +80,9 @@ print(f"AUC: {round(predictions['Score'].mean(), 4) if 'Score' in predictions.co
 # print(f"F1-Score: {round(2 * (predictions[predictions['Label'] == 1]['Response'].mean() * predictions[predictions['Response'] == 1]['Label'].mean()) / (predictions[predictions['Label'] == 1]['Response'].mean() + predictions[predictions['Response'] == 1]['Label'].mean()), 4)}")
  
 # ============== Salvando o Modelo Treinado ==============
-save_model(best_model, 'pickle_rf_pycaret2')
-print("\nModelo salvo com sucesso: 'pickle_rf_pycaret2.pkl'")
- 
-# Salvando os dados de validação para futuras predições
-df_valid.drop('Response', axis=1).to_csv('Xtest.csv', index=False)
-print("\nConjunto de validação salvo como 'Xtest.csv'")
+save_model(best_model, './pickle/pickle_rf_pycaret2')
+print("\nModelo salvo em './pickle/pickle_rf_pycaret2.pkl'")
+
+# Salva o conjunto de validação direto na pasta
+df_valid.drop('Response', axis=1).to_csv('./pickle/Xtest.csv', index=False)
+print("\nConjunto de validação salvo como './pickle/Xtest.csv'")
