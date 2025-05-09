@@ -1189,3 +1189,1977 @@ Alternately, you can install this by running `pip install pycaret[models]`
 2025-05-09 14:37:33,792:WARNING:C:\Users\marco\OneDrive\Desktop\FIAP - 2o ANO\FRONTEND\CP2-Front\app.py:123: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
   fig, ax = plt.subplots()
 
+2025-05-09 15:35:23,137:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:35:23,137:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:35:23,137:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:35:23,137:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:35:24,312:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 15:35:25,191:WARNING:c:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\pycaret\internal\pipeline.py:135: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.1.1', 'setuptools': '58.1.0', 'pycaret': '3.0.1', 'IPython': '8.18.1', 'ipywidgets': '8.1.7', 'tqdm': '4.67.1', 'numpy': '1.23.5', 'pandas': '1.5.3', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.2.2', 'pyod': '2.0.5', 'imblearn': '0.12.4', 'category_encoders': '2.6.4', 'lightgbm': '4.6.0', 'numba': '0.60.0', 'requests': '2.32.3', 'matplotlib': '3.7.1', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'kaleido': '0.2.1', 'statsmodels': '0.14.4', 'sktime': '0.17.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '7.0.0'}, 'python': {'version': '3.9.13', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '22.2.1', 'setuptools': '63.2.0', 'pycaret': '3.0.1', 'IPython': '8.36.0', 'ipywidgets': '8.1.7', 'tqdm': '4.67.1', 'numpy': '1.23.5', 'pandas': '1.5.3', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.2.2', 'pyod': '2.0.5', 'imblearn': '0.12.4', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.60.0', 'requests': '2.32.3', 'matplotlib': '3.10.1', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'kaleido': '0.2.1', 'statsmodels': '0.14.4', 'sktime': '0.17.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '7.0.0'}, 'python': {'version': '3.10.6', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2025-05-09 15:35:55,910:WARNING:c:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\pycaret\internal\pipeline.py:135: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.1.1', 'setuptools': '58.1.0', 'pycaret': '3.0.1', 'IPython': '8.18.1', 'ipywidgets': '8.1.7', 'tqdm': '4.67.1', 'numpy': '1.23.5', 'pandas': '1.5.3', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.2.2', 'pyod': '2.0.5', 'imblearn': '0.12.4', 'category_encoders': '2.6.4', 'lightgbm': '4.6.0', 'numba': '0.60.0', 'requests': '2.32.3', 'matplotlib': '3.7.1', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'kaleido': '0.2.1', 'statsmodels': '0.14.4', 'sktime': '0.17.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '7.0.0'}, 'python': {'version': '3.9.13', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '22.2.1', 'setuptools': '63.2.0', 'pycaret': '3.0.1', 'IPython': '8.36.0', 'ipywidgets': '8.1.7', 'tqdm': '4.67.1', 'numpy': '1.23.5', 'pandas': '1.5.3', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.2.2', 'pyod': '2.0.5', 'imblearn': '0.12.4', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.60.0', 'requests': '2.32.3', 'matplotlib': '3.10.1', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'kaleido': '0.2.1', 'statsmodels': '0.14.4', 'sktime': '0.17.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '7.0.0'}, 'python': {'version': '3.10.6', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2025-05-09 15:35:55,930:INFO:Initializing predict_model()
+2025-05-09 15:35:55,931:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001BC8B3CB970>, estimator=Pipeline(memory=FastMemory(location=C:\Users\nicko\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model', LGBMClassifier(n_jobs=-1, random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001BC8B317040>)
+2025-05-09 15:35:55,931:INFO:Checking exceptions
+2025-05-09 15:35:55,931:INFO:Preloading libraries
+2025-05-09 15:35:55,931:INFO:Set up data.
+2025-05-09 15:35:55,943:INFO:Set up index.
+2025-05-09 15:36:26,169:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:157: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots()
+
+2025-05-09 15:36:35,721:WARNING:c:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\pycaret\internal\pipeline.py:135: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.1.1', 'setuptools': '58.1.0', 'pycaret': '3.0.1', 'IPython': '8.18.1', 'ipywidgets': '8.1.7', 'tqdm': '4.67.1', 'numpy': '1.23.5', 'pandas': '1.5.3', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.2.2', 'pyod': '2.0.5', 'imblearn': '0.12.4', 'category_encoders': '2.6.4', 'lightgbm': '4.6.0', 'numba': '0.60.0', 'requests': '2.32.3', 'matplotlib': '3.7.1', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'kaleido': '0.2.1', 'statsmodels': '0.14.4', 'sktime': '0.17.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '7.0.0'}, 'python': {'version': '3.9.13', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '22.2.1', 'setuptools': '63.2.0', 'pycaret': '3.0.1', 'IPython': '8.36.0', 'ipywidgets': '8.1.7', 'tqdm': '4.67.1', 'numpy': '1.23.5', 'pandas': '1.5.3', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.2.2', 'pyod': '2.0.5', 'imblearn': '0.12.4', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.60.0', 'requests': '2.32.3', 'matplotlib': '3.10.1', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'kaleido': '0.2.1', 'statsmodels': '0.14.4', 'sktime': '0.17.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '7.0.0'}, 'python': {'version': '3.10.6', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2025-05-09 15:36:35,738:INFO:Initializing predict_model()
+2025-05-09 15:36:35,739:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001BC8B164C40>, estimator=Pipeline(memory=FastMemory(location=C:\Users\nicko\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model', LGBMClassifier(n_jobs=-1, random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001BC8BA4F1F0>)
+2025-05-09 15:36:35,739:INFO:Checking exceptions
+2025-05-09 15:36:35,739:INFO:Preloading libraries
+2025-05-09 15:36:35,739:INFO:Set up data.
+2025-05-09 15:36:35,747:INFO:Set up index.
+2025-05-09 15:36:47,903:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:157: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots()
+
+2025-05-09 15:36:56,595:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:36:56,595:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:36:56,595:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:36:56,595:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:36:57,004:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 15:36:57,422:INFO:PyCaret ClassificationExperiment
+2025-05-09 15:36:57,422:INFO:Logging name: clf-default-name
+2025-05-09 15:36:57,422:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-05-09 15:36:57,422:INFO:version 3.0.1
+2025-05-09 15:36:57,422:INFO:Initializing setup()
+2025-05-09 15:36:57,422:INFO:self.USI: c989
+2025-05-09 15:36:57,422:INFO:self._variable_keys: {'gpu_param', 'seed', 'fold_generator', 'logging_param', 'fold_shuffle_param', 'exp_id', 'y_train', 'gpu_n_jobs_param', 'fix_imbalance', 'target_param', 'exp_name_log', 'data', 'idx', 'y_test', 'memory', 'pipeline', 'X_train', '_ml_usecase', 'log_plots_param', 'X_test', 'html_param', 'y', '_available_plots', 'X', 'is_multiclass', 'USI', 'n_jobs_param', 'fold_groups_param'}
+2025-05-09 15:36:57,422:INFO:Checking environment
+2025-05-09 15:36:57,422:INFO:python_version: 3.9.13
+2025-05-09 15:36:57,422:INFO:python_build: ('tags/v3.9.13:6de2ca5', 'May 17 2022 16:36:42')
+2025-05-09 15:36:57,422:INFO:machine: AMD64
+2025-05-09 15:36:57,429:INFO:platform: Windows-10-10.0.26100-SP0
+2025-05-09 15:36:57,433:INFO:Memory: svmem(total=16229769216, available=2325143552, percent=85.7, used=13904625664, free=2325143552)
+2025-05-09 15:36:57,433:INFO:Physical Core: 6
+2025-05-09 15:36:57,433:INFO:Logical Core: 12
+2025-05-09 15:36:57,433:INFO:Checking libraries
+2025-05-09 15:36:57,433:INFO:System:
+2025-05-09 15:36:57,434:INFO:    python: 3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]
+2025-05-09 15:36:57,434:INFO:executable: C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\Scripts\python.exe
+2025-05-09 15:36:57,434:INFO:   machine: Windows-10-10.0.26100-SP0
+2025-05-09 15:36:57,434:INFO:PyCaret required dependencies:
+2025-05-09 15:36:57,446:INFO:                 pip: 25.1.1
+2025-05-09 15:36:57,446:INFO:          setuptools: 58.1.0
+2025-05-09 15:36:57,446:INFO:             pycaret: 3.0.1
+2025-05-09 15:36:57,446:INFO:             IPython: 8.18.1
+2025-05-09 15:36:57,446:INFO:          ipywidgets: 8.1.7
+2025-05-09 15:36:57,446:INFO:                tqdm: 4.67.1
+2025-05-09 15:36:57,446:INFO:               numpy: 1.23.5
+2025-05-09 15:36:57,446:INFO:              pandas: 1.5.3
+2025-05-09 15:36:57,446:INFO:              jinja2: 3.1.6
+2025-05-09 15:36:57,446:INFO:               scipy: 1.11.4
+2025-05-09 15:36:57,446:INFO:              joblib: 1.3.2
+2025-05-09 15:36:57,446:INFO:             sklearn: 1.2.2
+2025-05-09 15:36:57,446:INFO:                pyod: 2.0.5
+2025-05-09 15:36:57,446:INFO:            imblearn: 0.12.4
+2025-05-09 15:36:57,446:INFO:   category_encoders: 2.6.4
+2025-05-09 15:36:57,446:INFO:            lightgbm: 4.6.0
+2025-05-09 15:36:57,446:INFO:               numba: 0.60.0
+2025-05-09 15:36:57,446:INFO:            requests: 2.32.3
+2025-05-09 15:36:57,446:INFO:          matplotlib: 3.7.1
+2025-05-09 15:36:57,446:INFO:          scikitplot: 0.3.7
+2025-05-09 15:36:57,446:INFO:         yellowbrick: 1.5
+2025-05-09 15:36:57,446:INFO:              plotly: 5.24.1
+2025-05-09 15:36:57,446:INFO:             kaleido: 0.2.1
+2025-05-09 15:36:57,446:INFO:         statsmodels: 0.14.4
+2025-05-09 15:36:57,446:INFO:              sktime: 0.17.0
+2025-05-09 15:36:57,446:INFO:               tbats: 1.1.3
+2025-05-09 15:36:57,446:INFO:            pmdarima: 2.0.4
+2025-05-09 15:36:57,446:INFO:              psutil: 7.0.0
+2025-05-09 15:36:57,446:INFO:PyCaret optional dependencies:
+2025-05-09 15:36:57,452:INFO:                shap: Not installed
+2025-05-09 15:36:57,452:INFO:           interpret: Not installed
+2025-05-09 15:36:57,452:INFO:                umap: Not installed
+2025-05-09 15:36:57,452:INFO:    pandas_profiling: Not installed
+2025-05-09 15:36:57,452:INFO:  explainerdashboard: Not installed
+2025-05-09 15:36:57,452:INFO:             autoviz: Not installed
+2025-05-09 15:36:57,452:INFO:           fairlearn: Not installed
+2025-05-09 15:36:57,452:INFO:             xgboost: Not installed
+2025-05-09 15:36:57,452:INFO:            catboost: Not installed
+2025-05-09 15:36:57,452:INFO:              kmodes: Not installed
+2025-05-09 15:36:57,452:INFO:             mlxtend: Not installed
+2025-05-09 15:36:57,452:INFO:       statsforecast: Not installed
+2025-05-09 15:36:57,452:INFO:        tune_sklearn: Not installed
+2025-05-09 15:36:57,452:INFO:                 ray: Not installed
+2025-05-09 15:36:57,452:INFO:            hyperopt: Not installed
+2025-05-09 15:36:57,452:INFO:              optuna: Not installed
+2025-05-09 15:36:57,452:INFO:               skopt: Not installed
+2025-05-09 15:36:57,452:INFO:              mlflow: Not installed
+2025-05-09 15:36:57,452:INFO:              gradio: Not installed
+2025-05-09 15:36:57,452:INFO:             fastapi: Not installed
+2025-05-09 15:36:57,452:INFO:             uvicorn: Not installed
+2025-05-09 15:36:57,452:INFO:              m2cgen: Not installed
+2025-05-09 15:36:57,452:INFO:           evidently: Not installed
+2025-05-09 15:36:57,452:INFO:               fugue: Not installed
+2025-05-09 15:36:57,452:INFO:           streamlit: 1.45.0
+2025-05-09 15:36:57,452:INFO:             prophet: Not installed
+2025-05-09 15:36:57,452:INFO:None
+2025-05-09 15:36:57,452:INFO:Set up data.
+2025-05-09 15:36:57,456:INFO:Set up train/test split.
+2025-05-09 15:36:57,460:INFO:Set up index.
+2025-05-09 15:36:57,460:INFO:Set up folding strategy.
+2025-05-09 15:36:57,460:INFO:Assigning column types.
+2025-05-09 15:36:57,462:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-05-09 15:36:57,487:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-05-09 15:36:57,489:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-09 15:36:57,509:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:57,509:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:57,533:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-05-09 15:36:57,534:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-09 15:36:57,549:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:57,549:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:57,550:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-05-09 15:36:57,575:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-09 15:36:57,589:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:57,589:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:57,614:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-09 15:36:57,629:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:57,629:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:57,629:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-05-09 15:36:57,669:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:57,669:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:57,708:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:57,708:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:57,711:INFO:Preparing preprocessing pipeline...
+2025-05-09 15:36:57,713:INFO:Set up simple imputation.
+2025-05-09 15:36:57,715:INFO:Set up encoding of categorical features.
+2025-05-09 15:36:57,715:INFO:Set up removing outliers.
+2025-05-09 15:36:57,715:INFO:Set up imbalanced handling.
+2025-05-09 15:36:57,910:INFO:Finished creating preprocessing pipeline.
+2025-05-09 15:36:57,914:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStoreP...
+                                                              verbose=0))),
+                ('remove_outliers',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RemoveOutliers(method='iforest',
+                                                               n_jobs=1,
+                                                               random_state=123,
+                                                               threshold=0.05))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              n_jobs=None,
+                                                                              random_state=None,
+                                                                              sampling_strategy='auto'))))],
+         verbose=False)
+2025-05-09 15:36:57,914:INFO:Creating final display dataframe.
+2025-05-09 15:36:58,426:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target          Response
+2                   Target type            Binary
+3           Original data shape        (1988, 26)
+4        Transformed data shape        (2907, 34)
+5   Transformed train set shape        (2310, 34)
+6    Transformed test set shape         (597, 34)
+7              Numeric features                23
+8          Categorical features                 2
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation              mean
+12       Categorical imputation              mode
+13     Maximum one-hot encoding                25
+14              Encoding method              None
+15              Remove outliers              True
+16           Outliers threshold              0.05
+17                Fix imbalance              True
+18         Fix imbalance method             SMOTE
+19               Fold Generator   StratifiedKFold
+20                  Fold Number                10
+21                     CPU Jobs                -1
+22                      Use GPU             False
+23               Log Experiment             False
+24              Experiment Name  clf-default-name
+25                          USI              c989
+2025-05-09 15:36:58,467:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:58,467:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:58,506:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:58,506:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-09 15:36:58,506:INFO:setup() successfully completed in 1.09s...............
+2025-05-09 15:36:58,506:INFO:Initializing compare_models()
+2025-05-09 15:36:58,506:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000178D7DB4310>, include=['lr', 'rf', 'lightgbm', 'gbc'], fold=None, round=4, cross_validation=True, sort=AUC, n_select=5, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x00000178D7DB4310>, 'include': ['lr', 'rf', 'lightgbm', 'gbc'], 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'AUC', 'n_select': 5, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>}, exclude=None)
+2025-05-09 15:36:58,506:INFO:Checking exceptions
+2025-05-09 15:36:58,510:INFO:Preparing display monitor
+2025-05-09 15:36:58,513:INFO:Initializing Logistic Regression
+2025-05-09 15:36:58,513:INFO:Total runtime is 0.0 minutes
+2025-05-09 15:36:58,513:INFO:SubProcess create_model() called ==================================
+2025-05-09 15:36:58,514:INFO:Initializing create_model()
+2025-05-09 15:36:58,514:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000178D7DB4310>, estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000178D7FA09A0>, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 15:36:58,514:INFO:Checking exceptions
+2025-05-09 15:36:58,514:INFO:Importing libraries
+2025-05-09 15:36:58,514:INFO:Copying training dataset
+2025-05-09 15:36:58,517:INFO:Defining folds
+2025-05-09 15:36:58,517:INFO:Declaring metric variables
+2025-05-09 15:36:58,517:INFO:Importing untrained model
+2025-05-09 15:36:58,517:INFO:Logistic Regression Imported successfully
+2025-05-09 15:36:58,517:INFO:Starting cross validation
+2025-05-09 15:36:58,521:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-09 15:37:00,942:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but IsolationForest was fitted with feature names
+  warnings.warn(
+
+2025-05-09 15:37:00,945:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but IsolationForest was fitted with feature names
+  warnings.warn(
+
+2025-05-09 15:37:00,955:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but IsolationForest was fitted with feature names
+  warnings.warn(
+
+2025-05-09 15:37:00,958:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but IsolationForest was fitted with feature names
+  warnings.warn(
+
+2025-05-09 15:37:00,968:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but IsolationForest was fitted with feature names
+  warnings.warn(
+
+2025-05-09 15:37:00,970:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but IsolationForest was fitted with feature names
+  warnings.warn(
+
+2025-05-09 15:37:00,970:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but IsolationForest was fitted with feature names
+  warnings.warn(
+
+2025-05-09 15:37:00,971:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but IsolationForest was fitted with feature names
+  warnings.warn(
+
+2025-05-09 15:37:00,974:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but IsolationForest was fitted with feature names
+  warnings.warn(
+
+2025-05-09 15:37:00,976:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but IsolationForest was fitted with feature names
+  warnings.warn(
+
+2025-05-09 15:37:01,377:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\linear_model\_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-05-09 15:37:01,385:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\linear_model\_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-05-09 15:37:01,394:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\linear_model\_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-05-09 15:37:01,410:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\.venv\lib\site-packages\sklearn\linear_model\_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2025-05-09 15:37:01,612:INFO:Calculating mean and std
+2025-05-09 15:37:01,614:INFO:Creating metrics dataframe
+2025-05-09 15:37:01,621:INFO:Uploading results into container
+2025-05-09 15:37:01,622:INFO:Uploading model into container now
+2025-05-09 15:37:01,622:INFO:_master_model_container: 1
+2025-05-09 15:37:01,622:INFO:_display_container: 2
+2025-05-09 15:37:01,622:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2025-05-09 15:37:01,622:INFO:create_model() successfully completed......................................
+2025-05-09 15:37:01,680:INFO:SubProcess create_model() end ==================================
+2025-05-09 15:37:01,680:INFO:Creating metrics dataframe
+2025-05-09 15:37:01,683:INFO:Initializing Random Forest Classifier
+2025-05-09 15:37:01,683:INFO:Total runtime is 0.05282954374949137 minutes
+2025-05-09 15:37:01,683:INFO:SubProcess create_model() called ==================================
+2025-05-09 15:37:01,683:INFO:Initializing create_model()
+2025-05-09 15:37:01,683:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000178D7DB4310>, estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000178D7FA09A0>, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 15:37:01,683:INFO:Checking exceptions
+2025-05-09 15:37:01,683:INFO:Importing libraries
+2025-05-09 15:37:01,683:INFO:Copying training dataset
+2025-05-09 15:37:01,686:INFO:Defining folds
+2025-05-09 15:37:01,686:INFO:Declaring metric variables
+2025-05-09 15:37:01,686:INFO:Importing untrained model
+2025-05-09 15:37:01,686:INFO:Random Forest Classifier Imported successfully
+2025-05-09 15:37:01,686:INFO:Starting cross validation
+2025-05-09 15:37:01,690:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-09 15:37:03,680:INFO:Calculating mean and std
+2025-05-09 15:37:03,681:INFO:Creating metrics dataframe
+2025-05-09 15:37:03,690:INFO:Uploading results into container
+2025-05-09 15:37:03,691:INFO:Uploading model into container now
+2025-05-09 15:37:03,691:INFO:_master_model_container: 2
+2025-05-09 15:37:03,691:INFO:_display_container: 2
+2025-05-09 15:37:03,691:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False)
+2025-05-09 15:37:03,691:INFO:create_model() successfully completed......................................
+2025-05-09 15:37:03,748:INFO:SubProcess create_model() end ==================================
+2025-05-09 15:37:03,748:INFO:Creating metrics dataframe
+2025-05-09 15:37:03,750:INFO:Initializing Light Gradient Boosting Machine
+2025-05-09 15:37:03,750:INFO:Total runtime is 0.08727858066558838 minutes
+2025-05-09 15:37:03,750:INFO:SubProcess create_model() called ==================================
+2025-05-09 15:37:03,750:INFO:Initializing create_model()
+2025-05-09 15:37:03,750:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000178D7DB4310>, estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000178D7FA09A0>, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 15:37:03,750:INFO:Checking exceptions
+2025-05-09 15:37:03,750:INFO:Importing libraries
+2025-05-09 15:37:03,750:INFO:Copying training dataset
+2025-05-09 15:37:03,753:INFO:Defining folds
+2025-05-09 15:37:03,753:INFO:Declaring metric variables
+2025-05-09 15:37:03,753:INFO:Importing untrained model
+2025-05-09 15:37:03,754:INFO:Light Gradient Boosting Machine Imported successfully
+2025-05-09 15:37:03,754:INFO:Starting cross validation
+2025-05-09 15:37:03,757:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-09 15:37:05,120:INFO:Calculating mean and std
+2025-05-09 15:37:05,120:INFO:Creating metrics dataframe
+2025-05-09 15:37:05,139:INFO:Uploading results into container
+2025-05-09 15:37:05,139:INFO:Uploading model into container now
+2025-05-09 15:37:05,140:INFO:_master_model_container: 3
+2025-05-09 15:37:05,140:INFO:_display_container: 2
+2025-05-09 15:37:05,140:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2025-05-09 15:37:05,140:INFO:create_model() successfully completed......................................
+2025-05-09 15:37:05,209:INFO:SubProcess create_model() end ==================================
+2025-05-09 15:37:05,209:INFO:Creating metrics dataframe
+2025-05-09 15:37:05,212:INFO:Initializing Gradient Boosting Classifier
+2025-05-09 15:37:05,212:INFO:Total runtime is 0.11164476474126181 minutes
+2025-05-09 15:37:05,212:INFO:SubProcess create_model() called ==================================
+2025-05-09 15:37:05,212:INFO:Initializing create_model()
+2025-05-09 15:37:05,213:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000178D7DB4310>, estimator=gbc, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000178D7FA09A0>, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 15:37:05,213:INFO:Checking exceptions
+2025-05-09 15:37:05,213:INFO:Importing libraries
+2025-05-09 15:37:05,213:INFO:Copying training dataset
+2025-05-09 15:37:05,216:INFO:Defining folds
+2025-05-09 15:37:05,216:INFO:Declaring metric variables
+2025-05-09 15:37:05,216:INFO:Importing untrained model
+2025-05-09 15:37:05,216:INFO:Gradient Boosting Classifier Imported successfully
+2025-05-09 15:37:05,216:INFO:Starting cross validation
+2025-05-09 15:37:05,220:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-09 15:37:06,756:INFO:Calculating mean and std
+2025-05-09 15:37:06,756:INFO:Creating metrics dataframe
+2025-05-09 15:37:06,772:INFO:Uploading results into container
+2025-05-09 15:37:06,773:INFO:Uploading model into container now
+2025-05-09 15:37:06,773:INFO:_master_model_container: 4
+2025-05-09 15:37:06,773:INFO:_display_container: 2
+2025-05-09 15:37:06,773:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2025-05-09 15:37:06,774:INFO:create_model() successfully completed......................................
+2025-05-09 15:37:06,836:INFO:SubProcess create_model() end ==================================
+2025-05-09 15:37:06,836:INFO:Creating metrics dataframe
+2025-05-09 15:37:06,839:INFO:Initializing create_model()
+2025-05-09 15:37:06,839:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000178D7DB4310>, estimator=GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 15:37:06,839:INFO:Checking exceptions
+2025-05-09 15:37:06,840:INFO:Importing libraries
+2025-05-09 15:37:06,840:INFO:Copying training dataset
+2025-05-09 15:37:06,843:INFO:Defining folds
+2025-05-09 15:37:06,843:INFO:Declaring metric variables
+2025-05-09 15:37:06,843:INFO:Importing untrained model
+2025-05-09 15:37:06,843:INFO:Declaring custom model
+2025-05-09 15:37:06,843:INFO:Gradient Boosting Classifier Imported successfully
+2025-05-09 15:37:06,847:INFO:Cross validation set to False
+2025-05-09 15:37:06,848:INFO:Fitting Model
+2025-05-09 15:37:07,727:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2025-05-09 15:37:07,728:INFO:create_model() successfully completed......................................
+2025-05-09 15:37:07,776:INFO:Initializing create_model()
+2025-05-09 15:37:07,776:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000178D7DB4310>, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 15:37:07,776:INFO:Checking exceptions
+2025-05-09 15:37:07,777:INFO:Importing libraries
+2025-05-09 15:37:07,777:INFO:Copying training dataset
+2025-05-09 15:37:07,780:INFO:Defining folds
+2025-05-09 15:37:07,780:INFO:Declaring metric variables
+2025-05-09 15:37:07,780:INFO:Importing untrained model
+2025-05-09 15:37:07,780:INFO:Declaring custom model
+2025-05-09 15:37:07,780:INFO:Random Forest Classifier Imported successfully
+2025-05-09 15:37:07,783:INFO:Cross validation set to False
+2025-05-09 15:37:07,783:INFO:Fitting Model
+2025-05-09 15:37:08,004:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False)
+2025-05-09 15:37:08,004:INFO:create_model() successfully completed......................................
+2025-05-09 15:37:08,053:INFO:Initializing create_model()
+2025-05-09 15:37:08,053:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000178D7DB4310>, estimator=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 15:37:08,053:INFO:Checking exceptions
+2025-05-09 15:37:08,054:INFO:Importing libraries
+2025-05-09 15:37:08,054:INFO:Copying training dataset
+2025-05-09 15:37:08,056:INFO:Defining folds
+2025-05-09 15:37:08,056:INFO:Declaring metric variables
+2025-05-09 15:37:08,056:INFO:Importing untrained model
+2025-05-09 15:37:08,056:INFO:Declaring custom model
+2025-05-09 15:37:08,057:INFO:Light Gradient Boosting Machine Imported successfully
+2025-05-09 15:37:08,060:INFO:Cross validation set to False
+2025-05-09 15:37:08,060:INFO:Fitting Model
+2025-05-09 15:37:08,118:INFO:[LightGBM] [Warning] Found whitespace in feature_names, replace with underlines
+2025-05-09 15:37:08,118:INFO:[LightGBM] [Info] Number of positive: 1155, number of negative: 1155
+2025-05-09 15:37:08,119:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000564 seconds.
+2025-05-09 15:37:08,119:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-05-09 15:37:08,119:INFO:[LightGBM] [Info] Total Bins 6044
+2025-05-09 15:37:08,119:INFO:[LightGBM] [Info] Number of data points in the train set: 2310, number of used features: 32
+2025-05-09 15:37:08,120:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2025-05-09 15:37:08,197:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2025-05-09 15:37:08,197:INFO:create_model() successfully completed......................................
+2025-05-09 15:37:08,258:INFO:Initializing create_model()
+2025-05-09 15:37:08,258:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000178D7DB4310>, estimator=LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2025-05-09 15:37:08,258:INFO:Checking exceptions
+2025-05-09 15:37:08,258:INFO:Importing libraries
+2025-05-09 15:37:08,258:INFO:Copying training dataset
+2025-05-09 15:37:08,262:INFO:Defining folds
+2025-05-09 15:37:08,262:INFO:Declaring metric variables
+2025-05-09 15:37:08,262:INFO:Importing untrained model
+2025-05-09 15:37:08,262:INFO:Declaring custom model
+2025-05-09 15:37:08,263:INFO:Logistic Regression Imported successfully
+2025-05-09 15:37:08,268:INFO:Cross validation set to False
+2025-05-09 15:37:08,268:INFO:Fitting Model
+2025-05-09 15:37:08,500:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2025-05-09 15:37:08,500:INFO:create_model() successfully completed......................................
+2025-05-09 15:37:08,553:INFO:_master_model_container: 4
+2025-05-09 15:37:08,553:INFO:_display_container: 2
+2025-05-09 15:37:08,554:INFO:[GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False), RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0), LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)]
+2025-05-09 15:37:08,554:INFO:compare_models() successfully completed......................................
+2025-05-09 15:37:08,556:INFO:Initializing predict_model()
+2025-05-09 15:37:08,556:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000178D7DB4310>, estimator=GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000178DB48E280>)
+2025-05-09 15:37:08,556:INFO:Checking exceptions
+2025-05-09 15:37:08,556:INFO:Preloading libraries
+2025-05-09 15:37:08,556:INFO:Set up data.
+2025-05-09 15:37:08,559:INFO:Set up index.
+2025-05-09 15:37:08,671:INFO:Initializing save_model()
+2025-05-09 15:37:08,671:INFO:save_model(model=GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False), model_name=./pickle/pickle_rf_pycaret2, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStoreP...
+                                                              verbose=0))),
+                ('remove_outliers',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=RemoveOutliers(method='iforest',
+                                                               n_jobs=1,
+                                                               random_state=123,
+                                                               threshold=0.05))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              n_jobs=None,
+                                                                              random_state=None,
+                                                                              sampling_strategy='auto'))))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2025-05-09 15:37:08,671:INFO:Adding model into prep_pipe
+2025-05-09 15:37:08,698:INFO:./pickle/pickle_rf_pycaret2.pkl saved in current working directory
+2025-05-09 15:37:08,704:INFO:Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStoreP...
+                                            criterion='friedman_mse', init=None,
+                                            learning_rate=0.1, loss='log_loss',
+                                            max_depth=3, max_features=None,
+                                            max_leaf_nodes=None,
+                                            min_impurity_decrease=0.0,
+                                            min_samples_leaf=1,
+                                            min_samples_split=2,
+                                            min_weight_fraction_leaf=0.0,
+                                            n_estimators=100,
+                                            n_iter_no_change=None,
+                                            random_state=123, subsample=1.0,
+                                            tol=0.0001, validation_fraction=0.1,
+                                            verbose=0, warm_start=False))],
+         verbose=False)
+2025-05-09 15:37:08,704:INFO:save_model() successfully completed......................................
+2025-05-09 15:37:43,340:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:37:43,340:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:37:43,340:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:37:43,340:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:37:43,683:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 15:37:49,867:INFO:Initializing predict_model()
+2025-05-09 15:37:49,868:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001735B382E80>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000017311FFCA60>)
+2025-05-09 15:37:49,868:INFO:Checking exceptions
+2025-05-09 15:37:49,868:INFO:Preloading libraries
+2025-05-09 15:37:49,868:INFO:Set up data.
+2025-05-09 15:37:49,873:INFO:Set up index.
+2025-05-09 15:38:26,260:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:157: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots()
+
+2025-05-09 15:38:48,158:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:157: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots()
+
+2025-05-09 15:40:10,997:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:40:10,997:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:40:10,997:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:40:10,997:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:40:11,330:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 15:43:12,722:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:43:12,722:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:43:12,722:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:43:12,722:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:43:13,097:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 15:43:19,174:INFO:Initializing predict_model()
+2025-05-09 15:43:19,174:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023B938A2130>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000023BDCAD7A60>)
+2025-05-09 15:43:19,174:INFO:Checking exceptions
+2025-05-09 15:43:19,174:INFO:Preloading libraries
+2025-05-09 15:43:19,175:INFO:Set up data.
+2025-05-09 15:43:19,178:INFO:Set up index.
+2025-05-09 15:44:10,649:INFO:Initializing predict_model()
+2025-05-09 15:44:10,649:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023B9417DBE0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000023B94173B80>)
+2025-05-09 15:44:10,649:INFO:Checking exceptions
+2025-05-09 15:44:10,649:INFO:Preloading libraries
+2025-05-09 15:44:10,649:INFO:Set up data.
+2025-05-09 15:44:10,655:INFO:Set up index.
+2025-05-09 15:44:18,918:INFO:Initializing predict_model()
+2025-05-09 15:44:18,918:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023B93F0FF10>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000023B93FC9550>)
+2025-05-09 15:44:18,918:INFO:Checking exceptions
+2025-05-09 15:44:18,918:INFO:Preloading libraries
+2025-05-09 15:44:18,918:INFO:Set up data.
+2025-05-09 15:44:18,922:INFO:Set up index.
+2025-05-09 15:44:20,285:INFO:Initializing predict_model()
+2025-05-09 15:44:20,285:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023B94015310>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000023B93D60700>)
+2025-05-09 15:44:20,285:INFO:Checking exceptions
+2025-05-09 15:44:20,285:INFO:Preloading libraries
+2025-05-09 15:44:20,286:INFO:Set up data.
+2025-05-09 15:44:20,290:INFO:Set up index.
+2025-05-09 15:45:42,918:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:45:42,918:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:45:42,918:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:45:42,918:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:45:43,256:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 15:45:48,512:INFO:Initializing predict_model()
+2025-05-09 15:45:48,512:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171F798AA90>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171F7C07670>)
+2025-05-09 15:45:48,512:INFO:Checking exceptions
+2025-05-09 15:45:48,512:INFO:Preloading libraries
+2025-05-09 15:45:48,512:INFO:Set up data.
+2025-05-09 15:45:48,517:INFO:Set up index.
+2025-05-09 15:45:53,711:INFO:Initializing predict_model()
+2025-05-09 15:45:53,711:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171F7B74100>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FD5ACC10>)
+2025-05-09 15:45:53,711:INFO:Checking exceptions
+2025-05-09 15:45:53,711:INFO:Preloading libraries
+2025-05-09 15:45:53,712:INFO:Set up data.
+2025-05-09 15:45:53,715:INFO:Set up index.
+2025-05-09 15:45:54,919:INFO:Initializing predict_model()
+2025-05-09 15:45:54,919:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171F798A7F0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FA2CF820>)
+2025-05-09 15:45:54,919:INFO:Checking exceptions
+2025-05-09 15:45:54,920:INFO:Preloading libraries
+2025-05-09 15:45:54,920:INFO:Set up data.
+2025-05-09 15:45:54,924:INFO:Set up index.
+2025-05-09 15:45:55,578:INFO:Initializing predict_model()
+2025-05-09 15:45:55,578:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171F7B8C400>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171F7CB6F70>)
+2025-05-09 15:45:55,579:INFO:Checking exceptions
+2025-05-09 15:45:55,579:INFO:Preloading libraries
+2025-05-09 15:45:55,579:INFO:Set up data.
+2025-05-09 15:45:55,584:INFO:Set up index.
+2025-05-09 15:45:57,327:INFO:Initializing predict_model()
+2025-05-09 15:45:57,327:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FA1DEAC0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FD7F1F70>)
+2025-05-09 15:45:57,328:INFO:Checking exceptions
+2025-05-09 15:45:57,328:INFO:Preloading libraries
+2025-05-09 15:45:57,328:INFO:Set up data.
+2025-05-09 15:45:57,332:INFO:Set up index.
+2025-05-09 15:45:58,252:INFO:Initializing predict_model()
+2025-05-09 15:45:58,252:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FD518250>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FD82CCA0>)
+2025-05-09 15:45:58,252:INFO:Checking exceptions
+2025-05-09 15:45:58,253:INFO:Preloading libraries
+2025-05-09 15:45:58,253:INFO:Set up data.
+2025-05-09 15:45:58,257:INFO:Set up index.
+2025-05-09 15:46:15,692:INFO:Initializing predict_model()
+2025-05-09 15:46:15,693:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171F7B0C1F0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FA355820>)
+2025-05-09 15:46:15,693:INFO:Checking exceptions
+2025-05-09 15:46:15,693:INFO:Preloading libraries
+2025-05-09 15:46:15,693:INFO:Set up data.
+2025-05-09 15:46:15,697:INFO:Set up index.
+2025-05-09 15:46:19,329:INFO:Initializing predict_model()
+2025-05-09 15:46:19,329:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171F7B0C5B0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FD96ACA0>)
+2025-05-09 15:46:19,329:INFO:Checking exceptions
+2025-05-09 15:46:19,329:INFO:Preloading libraries
+2025-05-09 15:46:19,330:INFO:Set up data.
+2025-05-09 15:46:19,334:INFO:Set up index.
+2025-05-09 15:46:25,351:INFO:Initializing predict_model()
+2025-05-09 15:46:25,351:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171F7F525E0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FD53A310>)
+2025-05-09 15:46:25,352:INFO:Checking exceptions
+2025-05-09 15:46:25,352:INFO:Preloading libraries
+2025-05-09 15:46:25,352:INFO:Set up data.
+2025-05-09 15:46:25,356:INFO:Set up index.
+2025-05-09 15:46:26,424:INFO:Initializing predict_model()
+2025-05-09 15:46:26,424:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171F7F52BB0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FD65EF70>)
+2025-05-09 15:46:26,424:INFO:Checking exceptions
+2025-05-09 15:46:26,424:INFO:Preloading libraries
+2025-05-09 15:46:26,424:INFO:Set up data.
+2025-05-09 15:46:26,429:INFO:Set up index.
+2025-05-09 15:46:27,490:INFO:Initializing predict_model()
+2025-05-09 15:46:27,490:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FD5CD5E0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FB3FF790>)
+2025-05-09 15:46:27,491:INFO:Checking exceptions
+2025-05-09 15:46:27,491:INFO:Preloading libraries
+2025-05-09 15:46:27,492:INFO:Set up data.
+2025-05-09 15:46:27,498:INFO:Set up index.
+2025-05-09 15:46:28,278:INFO:Initializing predict_model()
+2025-05-09 15:46:28,279:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FD9A5070>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FD66CA60>)
+2025-05-09 15:46:28,279:INFO:Checking exceptions
+2025-05-09 15:46:28,279:INFO:Preloading libraries
+2025-05-09 15:46:28,279:INFO:Set up data.
+2025-05-09 15:46:28,283:INFO:Set up index.
+2025-05-09 15:46:28,989:INFO:Initializing predict_model()
+2025-05-09 15:46:28,989:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FD7833D0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FA049F70>)
+2025-05-09 15:46:28,989:INFO:Checking exceptions
+2025-05-09 15:46:28,989:INFO:Preloading libraries
+2025-05-09 15:46:28,990:INFO:Set up data.
+2025-05-09 15:46:28,994:INFO:Set up index.
+2025-05-09 15:46:30,876:INFO:Initializing predict_model()
+2025-05-09 15:46:30,876:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FD662C10>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FDA47040>)
+2025-05-09 15:46:30,876:INFO:Checking exceptions
+2025-05-09 15:46:30,876:INFO:Preloading libraries
+2025-05-09 15:46:30,877:INFO:Set up data.
+2025-05-09 15:46:30,882:INFO:Set up index.
+2025-05-09 15:46:31,036:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:311: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 15:46:44,829:INFO:Initializing predict_model()
+2025-05-09 15:46:44,829:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FEB92D90>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FB3E0040>)
+2025-05-09 15:46:44,829:INFO:Checking exceptions
+2025-05-09 15:46:44,829:INFO:Preloading libraries
+2025-05-09 15:46:44,829:INFO:Set up data.
+2025-05-09 15:46:44,833:INFO:Set up index.
+2025-05-09 15:46:48,011:INFO:Initializing predict_model()
+2025-05-09 15:46:48,011:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FD62A190>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171F9FE81F0>)
+2025-05-09 15:46:48,011:INFO:Checking exceptions
+2025-05-09 15:46:48,011:INFO:Preloading libraries
+2025-05-09 15:46:48,011:INFO:Set up data.
+2025-05-09 15:46:48,015:INFO:Set up index.
+2025-05-09 15:46:49,763:INFO:Initializing predict_model()
+2025-05-09 15:46:49,763:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FA22BFA0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FD522040>)
+2025-05-09 15:46:49,763:INFO:Checking exceptions
+2025-05-09 15:46:49,763:INFO:Preloading libraries
+2025-05-09 15:46:49,764:INFO:Set up data.
+2025-05-09 15:46:49,767:INFO:Set up index.
+2025-05-09 15:46:51,100:INFO:Initializing predict_model()
+2025-05-09 15:46:51,100:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FA04D6A0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FA1FCD30>)
+2025-05-09 15:46:51,100:INFO:Checking exceptions
+2025-05-09 15:46:51,101:INFO:Preloading libraries
+2025-05-09 15:46:51,101:INFO:Set up data.
+2025-05-09 15:46:51,105:INFO:Set up index.
+2025-05-09 15:46:52,105:INFO:Initializing predict_model()
+2025-05-09 15:46:52,106:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FA04DDC0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FA2C4A60>)
+2025-05-09 15:46:52,106:INFO:Checking exceptions
+2025-05-09 15:46:52,106:INFO:Preloading libraries
+2025-05-09 15:46:52,106:INFO:Set up data.
+2025-05-09 15:46:52,110:INFO:Set up index.
+2025-05-09 15:46:54,512:INFO:Initializing predict_model()
+2025-05-09 15:46:54,512:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171F7AED820>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FA383820>)
+2025-05-09 15:46:54,512:INFO:Checking exceptions
+2025-05-09 15:46:54,512:INFO:Preloading libraries
+2025-05-09 15:46:54,513:INFO:Set up data.
+2025-05-09 15:46:54,516:INFO:Set up index.
+2025-05-09 15:47:01,335:INFO:Initializing predict_model()
+2025-05-09 15:47:01,335:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171F7AED460>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FD5DF820>)
+2025-05-09 15:47:01,336:INFO:Checking exceptions
+2025-05-09 15:47:01,336:INFO:Preloading libraries
+2025-05-09 15:47:01,336:INFO:Set up data.
+2025-05-09 15:47:01,340:INFO:Set up index.
+2025-05-09 15:47:06,032:INFO:Initializing predict_model()
+2025-05-09 15:47:06,032:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171C1256220>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FD7BD040>)
+2025-05-09 15:47:06,032:INFO:Checking exceptions
+2025-05-09 15:47:06,032:INFO:Preloading libraries
+2025-05-09 15:47:06,033:INFO:Set up data.
+2025-05-09 15:47:06,036:INFO:Set up index.
+2025-05-09 15:47:07,743:INFO:Initializing predict_model()
+2025-05-09 15:47:07,743:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FD6B2790>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FD640F70>)
+2025-05-09 15:47:07,743:INFO:Checking exceptions
+2025-05-09 15:47:07,743:INFO:Preloading libraries
+2025-05-09 15:47:07,744:INFO:Set up data.
+2025-05-09 15:47:07,749:INFO:Set up index.
+2025-05-09 15:47:07,937:WARNING:C:\Users\prude\OneDrive\햞ea de Trabalho\CP\CP2-Front\app.py:311: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=dpi_val)
+
+2025-05-09 15:47:10,653:INFO:Initializing predict_model()
+2025-05-09 15:47:10,653:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FD671F10>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FA2F1C10>)
+2025-05-09 15:47:10,653:INFO:Checking exceptions
+2025-05-09 15:47:10,653:INFO:Preloading libraries
+2025-05-09 15:47:10,654:INFO:Set up data.
+2025-05-09 15:47:10,657:INFO:Set up index.
+2025-05-09 15:49:24,818:INFO:Initializing predict_model()
+2025-05-09 15:49:24,818:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FD662280>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FA266E50>)
+2025-05-09 15:49:24,818:INFO:Checking exceptions
+2025-05-09 15:49:24,818:INFO:Preloading libraries
+2025-05-09 15:49:24,818:INFO:Set up data.
+2025-05-09 15:49:24,822:INFO:Set up index.
+2025-05-09 15:49:45,459:INFO:Initializing predict_model()
+2025-05-09 15:49:45,460:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FDAB7370>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FB3F7700>)
+2025-05-09 15:49:45,460:INFO:Checking exceptions
+2025-05-09 15:49:45,460:INFO:Preloading libraries
+2025-05-09 15:49:45,460:INFO:Set up data.
+2025-05-09 15:49:45,464:INFO:Set up index.
+2025-05-09 15:49:46,614:INFO:Initializing predict_model()
+2025-05-09 15:49:46,614:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FD4CE580>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FA2DC670>)
+2025-05-09 15:49:46,615:INFO:Checking exceptions
+2025-05-09 15:49:46,615:INFO:Preloading libraries
+2025-05-09 15:49:46,615:INFO:Set up data.
+2025-05-09 15:49:46,618:INFO:Set up index.
+2025-05-09 15:49:57,987:INFO:Initializing predict_model()
+2025-05-09 15:49:57,987:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000171FA1181C0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000171FD6C59D0>)
+2025-05-09 15:49:57,987:INFO:Checking exceptions
+2025-05-09 15:49:57,987:INFO:Preloading libraries
+2025-05-09 15:49:57,987:INFO:Set up data.
+2025-05-09 15:49:57,993:INFO:Set up index.
+2025-05-09 15:52:24,200:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:52:24,200:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:52:24,200:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:52:24,200:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:52:24,553:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 15:52:28,918:INFO:Initializing predict_model()
+2025-05-09 15:52:28,918:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000120E64F0220>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000120E62F7AF0>)
+2025-05-09 15:52:28,918:INFO:Checking exceptions
+2025-05-09 15:52:28,918:INFO:Preloading libraries
+2025-05-09 15:52:28,918:INFO:Set up data.
+2025-05-09 15:52:28,924:INFO:Set up index.
+2025-05-09 15:52:33,592:INFO:Initializing predict_model()
+2025-05-09 15:52:33,592:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000120A3CFB880>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000120A07C25E0>)
+2025-05-09 15:52:33,592:INFO:Checking exceptions
+2025-05-09 15:52:33,592:INFO:Preloading libraries
+2025-05-09 15:52:33,592:INFO:Set up data.
+2025-05-09 15:52:33,596:INFO:Set up index.
+2025-05-09 15:55:09,089:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:55:09,089:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:55:09,089:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:55:09,089:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-09 15:55:09,463:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2025-05-09 15:55:14,820:INFO:Initializing predict_model()
+2025-05-09 15:55:14,820:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017BB23B7A30>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000017BB0B11C10>)
+2025-05-09 15:55:14,820:INFO:Checking exceptions
+2025-05-09 15:55:14,820:INFO:Preloading libraries
+2025-05-09 15:55:14,820:INFO:Set up data.
+2025-05-09 15:55:14,825:INFO:Set up index.
+2025-05-09 15:55:26,898:INFO:Initializing predict_model()
+2025-05-09 15:55:26,898:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017BB22910D0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000017BB234B3A0>)
+2025-05-09 15:55:26,898:INFO:Checking exceptions
+2025-05-09 15:55:26,898:INFO:Preloading libraries
+2025-05-09 15:55:26,898:INFO:Set up data.
+2025-05-09 15:55:26,903:INFO:Set up index.
+2025-05-09 15:55:38,775:INFO:Initializing predict_model()
+2025-05-09 15:55:38,775:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017BFB910F10>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000017BB234BB80>)
+2025-05-09 15:55:38,775:INFO:Checking exceptions
+2025-05-09 15:55:38,775:INFO:Preloading libraries
+2025-05-09 15:55:38,775:INFO:Set up data.
+2025-05-09 15:55:38,779:INFO:Set up index.
+2025-05-09 15:55:40,693:INFO:Initializing predict_model()
+2025-05-09 15:55:40,694:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017BB23BF640>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000017BB234B160>)
+2025-05-09 15:55:40,694:INFO:Checking exceptions
+2025-05-09 15:55:40,694:INFO:Preloading libraries
+2025-05-09 15:55:40,694:INFO:Set up data.
+2025-05-09 15:55:40,697:INFO:Set up index.
+2025-05-09 15:55:42,744:INFO:Initializing predict_model()
+2025-05-09 15:55:42,744:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017BFB903700>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000017BB234B790>)
+2025-05-09 15:55:42,744:INFO:Checking exceptions
+2025-05-09 15:55:42,744:INFO:Preloading libraries
+2025-05-09 15:55:42,744:INFO:Set up data.
+2025-05-09 15:55:42,749:INFO:Set up index.
+2025-05-09 15:55:46,914:INFO:Initializing predict_model()
+2025-05-09 15:55:46,914:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017BB1FD7D00>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000017BB234BAF0>)
+2025-05-09 15:55:46,914:INFO:Checking exceptions
+2025-05-09 15:55:46,914:INFO:Preloading libraries
+2025-05-09 15:55:46,914:INFO:Set up data.
+2025-05-09 15:55:46,920:INFO:Set up index.
+2025-05-09 15:55:51,622:INFO:Initializing predict_model()
+2025-05-09 15:55:51,622:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017BFB910F10>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000017BB234B430>)
+2025-05-09 15:55:51,622:INFO:Checking exceptions
+2025-05-09 15:55:51,622:INFO:Preloading libraries
+2025-05-09 15:55:51,622:INFO:Set up data.
+2025-05-09 15:55:51,625:INFO:Set up index.
+2025-05-09 15:55:58,429:INFO:Initializing predict_model()
+2025-05-09 15:55:58,429:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000017BB23E7340>, estimator=Pipeline(memory=FastMemory(location=C:\Users\prude\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['Income', 'Kidhome', 'Teenhome',
+                                             'Recency', 'MntWines', 'MntFruits',
+                                             'MntMeatProducts',
+                                             'MntFishProducts',
+                                             'MntSweetProducts', 'MntGoldProds',
+                                             'NumDealsPurchases',
+                                             'NumWebPurchases',
+                                             'NumCatalogPurchases',
+                                             'NumStorePurchases',
+                                             'Nu...
+                 TransformerWrapper(include=['Education', 'Marital_Status'],
+                                    transformer=OneHotEncoder(cols=['Education',
+                                                                    'Marital_Status'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('trained_model',
+                 GradientBoostingClassifier(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=True, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000017BB234BAF0>)
+2025-05-09 15:55:58,429:INFO:Checking exceptions
+2025-05-09 15:55:58,430:INFO:Preloading libraries
+2025-05-09 15:55:58,430:INFO:Set up data.
+2025-05-09 15:55:58,434:INFO:Set up index.
